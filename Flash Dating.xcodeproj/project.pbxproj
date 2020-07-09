@@ -10,7 +10,7 @@
 		9081CBF94FB1CF43DAEA100D /* Pods_Flash_Dating_001.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9032110E0A79E69B53A6452B /* Pods_Flash_Dating_001.framework */; };
 		FBAC348624B75EB9002641B4 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC348524B75EB9002641B4 /* BlueButton.swift */; };
 		FBAC348824B76456002641B4 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC348724B76456002641B4 /* TitleLabel.swift */; };
-		FBAC348A24B766DF002641B4 /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC348924B766DF002641B4 /* MainTextField.swift */; };
+		FBAC348F24B7817B002641B4 /* Metropolis-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBAC348E24B7817B002641B4 /* Metropolis-Black.otf */; };
 		FBDF516224B72EB00021B895 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF516124B72EB00021B895 /* VerifyViewController.swift */; };
 		FBDF516424B732070021B895 /* FillNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF516324B732070021B895 /* FillNameViewController.swift */; };
 		FBDF516624B73D4E0021B895 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF516524B73D4E0021B895 /* ForgotPasswordViewController.swift */; };
@@ -36,13 +36,31 @@
 		F36EC2816EDD87BEADD54F7E /* Pods-Flash Dating 001.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Dating 001.debug.xcconfig"; path = "Target Support Files/Pods-Flash Dating 001/Pods-Flash Dating 001.debug.xcconfig"; sourceTree = "<group>"; };
 		FBAC348524B75EB9002641B4 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 		FBAC348724B76456002641B4 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
-		FBAC348924B766DF002641B4 /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextField.swift; sourceTree = "<group>"; };
+		FBAC348E24B7817B002641B4 /* Metropolis-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Black.otf"; sourceTree = "<group>"; };
+		FBAC349024B78192002641B4 /* Metropolis-ExtraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraLightItalic.otf"; sourceTree = "<group>"; };
+		FBAC349124B78192002641B4 /* Metropolis-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-RegularItalic.otf"; sourceTree = "<group>"; };
+		FBAC349224B78192002641B4 /* Metropolis-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraLight.otf"; sourceTree = "<group>"; };
+		FBAC349324B78192002641B4 /* Metropolis-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-BoldItalic.otf"; sourceTree = "<group>"; };
+		FBAC349424B78193002641B4 /* Metropolis-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
+		FBAC349524B78193002641B4 /* Metropolis-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-SemiBoldItalic.otf"; sourceTree = "<group>"; };
+		FBAC349624B78193002641B4 /* Metropolis-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-BlackItalic.otf"; sourceTree = "<group>"; };
+		FBAC349724B78193002641B4 /* Metropolis-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Light.otf"; sourceTree = "<group>"; };
+		FBAC349824B78193002641B4 /* Metropolis-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-SemiBold.otf"; sourceTree = "<group>"; };
+		FBAC349924B78194002641B4 /* Metropolis-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Metropolis-Black.otf"; path = "../../../../Downloads/metropolis-2-cufonfonts/Metropolis-Black.otf"; sourceTree = "<group>"; };
+		FBAC349A24B78194002641B4 /* Metropolis-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraBold.otf"; sourceTree = "<group>"; };
+		FBAC349B24B78194002641B4 /* Metropolis-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Medium.otf"; sourceTree = "<group>"; };
+		FBAC349C24B78194002641B4 /* Metropolis-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ThinItalic.otf"; sourceTree = "<group>"; };
+		FBAC349D24B78194002641B4 /* Metropolis-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Thin.otf"; sourceTree = "<group>"; };
+		FBAC349E24B78195002641B4 /* Metropolis-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Bold.otf"; sourceTree = "<group>"; };
+		FBAC349F24B78195002641B4 /* Metropolis-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Regular.otf"; sourceTree = "<group>"; };
+		FBAC34A024B78195002641B4 /* Metropolis-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-MediumItalic.otf"; sourceTree = "<group>"; };
+		FBAC34A124B78195002641B4 /* Metropolis-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-LightItalic.otf"; sourceTree = "<group>"; };
 		FBDF516124B72EB00021B895 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		FBDF516324B732070021B895 /* FillNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillNameViewController.swift; sourceTree = "<group>"; };
 		FBDF516524B73D4E0021B895 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		FBDF516D24B7555E0021B895 /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
 		FBDF516F24B75B450021B895 /* PinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkButton.swift; sourceTree = "<group>"; };
-		FBE10C0624B5F44B007D3C79 /* Flash Dating 001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flash Dating 001.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBE10C0624B5F44B007D3C79 /* Flash Dating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flash Dating.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE10C0924B5F44B007D3C79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBE10C0B24B5F44B007D3C79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FBE10C1024B5F44B007D3C79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +95,32 @@
 				ED411B9E8767525F0F5685DA /* Pods-Flash Dating 001.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FBAC348B24B78146002641B4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FBAC349924B78194002641B4 /* Metropolis-Black.otf */,
+				FBAC349624B78193002641B4 /* Metropolis-BlackItalic.otf */,
+				FBAC349E24B78195002641B4 /* Metropolis-Bold.otf */,
+				FBAC349324B78192002641B4 /* Metropolis-BoldItalic.otf */,
+				FBAC349A24B78194002641B4 /* Metropolis-ExtraBold.otf */,
+				FBAC349424B78193002641B4 /* Metropolis-ExtraBoldItalic.otf */,
+				FBAC349224B78192002641B4 /* Metropolis-ExtraLight.otf */,
+				FBAC349024B78192002641B4 /* Metropolis-ExtraLightItalic.otf */,
+				FBAC349724B78193002641B4 /* Metropolis-Light.otf */,
+				FBAC34A124B78195002641B4 /* Metropolis-LightItalic.otf */,
+				FBAC349B24B78194002641B4 /* Metropolis-Medium.otf */,
+				FBAC34A024B78195002641B4 /* Metropolis-MediumItalic.otf */,
+				FBAC349F24B78195002641B4 /* Metropolis-Regular.otf */,
+				FBAC349124B78192002641B4 /* Metropolis-RegularItalic.otf */,
+				FBAC349824B78193002641B4 /* Metropolis-SemiBold.otf */,
+				FBAC349524B78193002641B4 /* Metropolis-SemiBoldItalic.otf */,
+				FBAC349D24B78194002641B4 /* Metropolis-Thin.otf */,
+				FBAC349C24B78194002641B4 /* Metropolis-ThinItalic.otf */,
+				FBAC348E24B7817B002641B4 /* Metropolis-Black.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		FBC639CF7B9D908C19D8FD0D /* Frameworks */ = {
@@ -122,7 +166,7 @@
 		FBE10C0724B5F44B007D3C79 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FBE10C0624B5F44B007D3C79 /* Flash Dating 001.app */,
+				FBE10C0624B5F44B007D3C79 /* Flash Dating.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +174,7 @@
 		FBE10C0824B5F44B007D3C79 /* Flash Dating 001 */ = {
 			isa = PBXGroup;
 			children = (
+				FBAC348B24B78146002641B4 /* Fonts */,
 				FBE10C2324B5F698007D3C79 /* Controller */,
 				FBE10C2224B5F67F007D3C79 /* Resources */,
 				FBE10C2124B5F670007D3C79 /* View */,
@@ -175,7 +220,6 @@
 				FBDF516F24B75B450021B895 /* PinkButton.swift */,
 				FBAC348524B75EB9002641B4 /* BlueButton.swift */,
 				FBAC348724B76456002641B4 /* TitleLabel.swift */,
-				FBAC348924B766DF002641B4 /* MainTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,9 +244,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FBE10C0524B5F44B007D3C79 /* Flash Dating 001 */ = {
+		FBE10C0524B5F44B007D3C79 /* Flash Dating */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FBE10C1A24B5F44C007D3C79 /* Build configuration list for PBXNativeTarget "Flash Dating 001" */;
+			buildConfigurationList = FBE10C1A24B5F44C007D3C79 /* Build configuration list for PBXNativeTarget "Flash Dating" */;
 			buildPhases = (
 				4519AE773DD7B6B134798045 /* [CP] Check Pods Manifest.lock */,
 				FBE10C0224B5F44B007D3C79 /* Sources */,
@@ -215,9 +259,9 @@
 			);
 			dependencies = (
 			);
-			name = "Flash Dating 001";
+			name = "Flash Dating";
 			productName = "Flash Dating 001";
-			productReference = FBE10C0624B5F44B007D3C79 /* Flash Dating 001.app */;
+			productReference = FBE10C0624B5F44B007D3C79 /* Flash Dating.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -235,7 +279,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FBE10C0124B5F44B007D3C79 /* Build configuration list for PBXProject "Flash Dating 001" */;
+			buildConfigurationList = FBE10C0124B5F44B007D3C79 /* Build configuration list for PBXProject "Flash Dating" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -248,7 +292,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FBE10C0524B5F44B007D3C79 /* Flash Dating 001 */,
+				FBE10C0524B5F44B007D3C79 /* Flash Dating */,
 			);
 		};
 /* End PBXProject section */
@@ -262,6 +306,7 @@
 				FBE10C1624B5F44C007D3C79 /* LaunchScreen.storyboard in Resources */,
 				FBE10C1324B5F44C007D3C79 /* Assets.xcassets in Resources */,
 				FBE10C1124B5F44B007D3C79 /* Main.storyboard in Resources */,
+				FBAC348F24B7817B002641B4 /* Metropolis-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +388,6 @@
 				FBE10C2B24B603C3007D3C79 /* ProfileViewController.swift in Sources */,
 				FBDF516224B72EB00021B895 /* VerifyViewController.swift in Sources */,
 				FBDF516624B73D4E0021B895 /* ForgotPasswordViewController.swift in Sources */,
-				FBAC348A24B766DF002641B4 /* MainTextField.swift in Sources */,
 				FBE10C2524B5FE7A007D3C79 /* HomeViewController.swift in Sources */,
 				FBDF516E24B7555E0021B895 /* StartPageViewController.swift in Sources */,
 				FBE10C2724B60184007D3C79 /* CurrentProfile.swift in Sources */,
@@ -525,7 +569,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FBE10C0124B5F44B007D3C79 /* Build configuration list for PBXProject "Flash Dating 001" */ = {
+		FBE10C0124B5F44B007D3C79 /* Build configuration list for PBXProject "Flash Dating" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FBE10C1824B5F44C007D3C79 /* Debug */,
@@ -534,7 +578,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FBE10C1A24B5F44C007D3C79 /* Build configuration list for PBXNativeTarget "Flash Dating 001" */ = {
+		FBE10C1A24B5F44C007D3C79 /* Build configuration list for PBXNativeTarget "Flash Dating" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FBE10C1B24B5F44C007D3C79 /* Debug */,

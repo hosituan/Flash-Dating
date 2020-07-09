@@ -10,6 +10,19 @@ import UIKit
 import Firebase
 
 class ProfileViewController: UIViewController {
+    
+    
+
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var profileImage: UIImageView!
+    @IBOutlet var emailLabel: UILabel!
+    
+    
+    //MARK: -- This is Main Action
+    
+    @IBAction func changeAddressButton(_ sender: UIButton) {
+    }
+    
 
     @IBAction func logoutButton(_ sender: UIButton) {
         do {
@@ -19,21 +32,39 @@ class ProfileViewController: UIViewController {
         }
         self.performSegue(withIdentifier: "logoutSegue", sender: nil)
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    //MARK: - Edit Action
+    
+    @IBOutlet var changeProfilePicture: UILabel!
+    @IBAction func editNameButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "openFillNameSegue", sender: nil)
+    }
+    @IBAction func refreshData(_ sender: UIButton) {
+         loadData()
+    }
+    // MARK: - Configure
+    func loadData() {
+        let userInfo = Auth.auth().currentUser
+        nameLabel.text = userInfo?.displayName
+        emailLabel.text = userInfo?.email
+        
+    }
+    func update() {
+        nameLabel.text = "abc"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadData()
     }
-    */
+    override func viewDidAppear(_ animated: Bool) {
+        print("appear")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        print("disappear")
+    }
+    
 
 }

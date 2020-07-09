@@ -8,18 +8,21 @@
 
 import UIKit
 import FirebaseUI
+import SkyFloatingLabelTextField
 
 
 class LoginViewController: UIViewController, FUIAuthDelegate {
     
     
     
-    @IBOutlet weak var usernameTextFeidl: UITextField!
-    @IBOutlet weak var passwordTextfeild: UITextField!
+    @IBOutlet var emailTextField: SkyFloatingLabelTextField!
+    
+ 
+    @IBOutlet var passwordTextField: SkyFloatingLabelTextField!
     @IBAction func loginButton(_ sender: UIButton) {
-        Auth.auth().signIn(withEmail: usernameTextFeidl.text!, password: passwordTextfeild.text!
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!
         ) { (authResult, error) in
-          if let error = error as? NSError {
+            if let error = error as NSError? {
             switch AuthErrorCode(rawValue: error.code) {
             case .operationNotAllowed: break
               // Error: Indicates that email and password accounts are not enabled. Enable them in the Auth section of the Firebase console.
@@ -48,6 +51,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+
     
     
     

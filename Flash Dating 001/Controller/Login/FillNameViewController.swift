@@ -14,12 +14,24 @@ class FillNameViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
 
     @IBAction func confirmButton(_ sender: UIButton) {
-        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-        changeRequest?.displayName = nameTextField.text!
-        changeRequest?.commitChanges { (error) in
-            
+        if Auth.auth().currentUser?.displayName == nil {
+            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+            changeRequest?.displayName = nameTextField.text!
+            changeRequest?.commitChanges { (error) in
+                
+            }
+            self.performSegue(withIdentifier: "signUpDoneSegue", sender: nil)
         }
-        self.performSegue(withIdentifier: "signUpDoneSegue", sender: nil)
+        else {
+            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+            changeRequest?.displayName = nameTextField.text!
+            changeRequest?.commitChanges { (error) in
+                
+            }
+            let presentedBy = presentingViewController as? ProfileViewController
+            presentedBy?.update()
+            self.dismiss(animated: true, completion: nil)
+        }
         
     }
     override func viewDidLoad() {
@@ -27,16 +39,4 @@ class FillNameViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
