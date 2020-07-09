@@ -3,27 +3,59 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9081CBF94FB1CF43DAEA100D /* Pods_Flash_Dating_001.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9032110E0A79E69B53A6452B /* Pods_Flash_Dating_001.framework */; };
+		FBAC348624B75EB9002641B4 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC348524B75EB9002641B4 /* BlueButton.swift */; };
+		FBAC348824B76456002641B4 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC348724B76456002641B4 /* TitleLabel.swift */; };
+		FBAC348A24B766DF002641B4 /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC348924B766DF002641B4 /* MainTextField.swift */; };
+		FBDF516224B72EB00021B895 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF516124B72EB00021B895 /* VerifyViewController.swift */; };
+		FBDF516424B732070021B895 /* FillNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF516324B732070021B895 /* FillNameViewController.swift */; };
+		FBDF516624B73D4E0021B895 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF516524B73D4E0021B895 /* ForgotPasswordViewController.swift */; };
+		FBDF516E24B7555E0021B895 /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF516D24B7555E0021B895 /* StartPageViewController.swift */; };
+		FBDF517024B75B450021B895 /* PinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF516F24B75B450021B895 /* PinkButton.swift */; };
 		FBE10C0A24B5F44B007D3C79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE10C0924B5F44B007D3C79 /* AppDelegate.swift */; };
 		FBE10C0C24B5F44B007D3C79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE10C0B24B5F44B007D3C79 /* SceneDelegate.swift */; };
-		FBE10C0E24B5F44B007D3C79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE10C0D24B5F44B007D3C79 /* ViewController.swift */; };
 		FBE10C1124B5F44B007D3C79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE10C0F24B5F44B007D3C79 /* Main.storyboard */; };
 		FBE10C1324B5F44C007D3C79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBE10C1224B5F44C007D3C79 /* Assets.xcassets */; };
 		FBE10C1624B5F44C007D3C79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE10C1424B5F44C007D3C79 /* LaunchScreen.storyboard */; };
+		FBE10C2524B5FE7A007D3C79 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE10C2424B5FE7A007D3C79 /* HomeViewController.swift */; };
+		FBE10C2724B60184007D3C79 /* CurrentProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE10C2624B60184007D3C79 /* CurrentProfile.swift */; };
+		FBE10C2924B601A4007D3C79 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE10C2824B601A4007D3C79 /* User.swift */; };
+		FBE10C2B24B603C3007D3C79 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE10C2A24B603C3007D3C79 /* ProfileViewController.swift */; };
+		FBE10C2D24B60ABB007D3C79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE10C2C24B60ABB007D3C79 /* LoginViewController.swift */; };
+		FBEE2C7A24B66DC800910BC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBEE2C7924B66DC800910BC6 /* GoogleService-Info.plist */; };
+		FBEE2C7C24B6F64400910BC6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEE2C7B24B6F64400910BC6 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9032110E0A79E69B53A6452B /* Pods_Flash_Dating_001.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flash_Dating_001.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED411B9E8767525F0F5685DA /* Pods-Flash Dating 001.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Dating 001.release.xcconfig"; path = "Target Support Files/Pods-Flash Dating 001/Pods-Flash Dating 001.release.xcconfig"; sourceTree = "<group>"; };
+		F36EC2816EDD87BEADD54F7E /* Pods-Flash Dating 001.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Dating 001.debug.xcconfig"; path = "Target Support Files/Pods-Flash Dating 001/Pods-Flash Dating 001.debug.xcconfig"; sourceTree = "<group>"; };
+		FBAC348524B75EB9002641B4 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
+		FBAC348724B76456002641B4 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		FBAC348924B766DF002641B4 /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextField.swift; sourceTree = "<group>"; };
+		FBDF516124B72EB00021B895 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		FBDF516324B732070021B895 /* FillNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillNameViewController.swift; sourceTree = "<group>"; };
+		FBDF516524B73D4E0021B895 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		FBDF516D24B7555E0021B895 /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
+		FBDF516F24B75B450021B895 /* PinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkButton.swift; sourceTree = "<group>"; };
 		FBE10C0624B5F44B007D3C79 /* Flash Dating 001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flash Dating 001.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE10C0924B5F44B007D3C79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBE10C0B24B5F44B007D3C79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FBE10C0D24B5F44B007D3C79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FBE10C1024B5F44B007D3C79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FBE10C1224B5F44C007D3C79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBE10C1524B5F44C007D3C79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBE10C1724B5F44C007D3C79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBE10C2424B5FE7A007D3C79 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FBE10C2624B60184007D3C79 /* CurrentProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentProfile.swift; sourceTree = "<group>"; };
+		FBE10C2824B601A4007D3C79 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FBE10C2A24B603C3007D3C79 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FBE10C2C24B60ABB007D3C79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FBEE2C7924B66DC800910BC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FBEE2C7B24B6F64400910BC6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +63,59 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9081CBF94FB1CF43DAEA100D /* Pods_Flash_Dating_001.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09F60942FCF077E5887B2CAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F36EC2816EDD87BEADD54F7E /* Pods-Flash Dating 001.debug.xcconfig */,
+				ED411B9E8767525F0F5685DA /* Pods-Flash Dating 001.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FBC639CF7B9D908C19D8FD0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9032110E0A79E69B53A6452B /* Pods_Flash_Dating_001.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBDF516724B73E210021B895 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FBE10C2C24B60ABB007D3C79 /* LoginViewController.swift */,
+				FBDF516124B72EB00021B895 /* VerifyViewController.swift */,
+				FBDF516524B73D4E0021B895 /* ForgotPasswordViewController.swift */,
+				FBEE2C7B24B6F64400910BC6 /* RegisterViewController.swift */,
+				FBDF516324B732070021B895 /* FillNameViewController.swift */,
+				FBDF516D24B7555E0021B895 /* StartPageViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FBDF516824B73E430021B895 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FBE10C2A24B603C3007D3C79 /* ProfileViewController.swift */,
+				FBE10C2424B5FE7A007D3C79 /* HomeViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		FBE10BFD24B5F44B007D3C79 = {
 			isa = PBXGroup;
 			children = (
 				FBE10C0824B5F44B007D3C79 /* Flash Dating 001 */,
 				FBE10C0724B5F44B007D3C79 /* Products */,
+				09F60942FCF077E5887B2CAB /* Pods */,
+				FBC639CF7B9D908C19D8FD0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +130,71 @@
 		FBE10C0824B5F44B007D3C79 /* Flash Dating 001 */ = {
 			isa = PBXGroup;
 			children = (
-				FBE10C0924B5F44B007D3C79 /* AppDelegate.swift */,
-				FBE10C0B24B5F44B007D3C79 /* SceneDelegate.swift */,
-				FBE10C0D24B5F44B007D3C79 /* ViewController.swift */,
-				FBE10C0F24B5F44B007D3C79 /* Main.storyboard */,
-				FBE10C1224B5F44C007D3C79 /* Assets.xcassets */,
-				FBE10C1424B5F44C007D3C79 /* LaunchScreen.storyboard */,
-				FBE10C1724B5F44C007D3C79 /* Info.plist */,
+				FBE10C2324B5F698007D3C79 /* Controller */,
+				FBE10C2224B5F67F007D3C79 /* Resources */,
+				FBE10C2124B5F670007D3C79 /* View */,
+				FBE10C2024B5F665007D3C79 /* App Delegate */,
+				FBE10C1F24B5F661007D3C79 /* ViewModel */,
+				FBE10C1E24B5F65D007D3C79 /* Model */,
 			);
 			path = "Flash Dating 001";
+			sourceTree = "<group>";
+		};
+		FBE10C1E24B5F65D007D3C79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBE10C2624B60184007D3C79 /* CurrentProfile.swift */,
+				FBE10C2824B601A4007D3C79 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBE10C1F24B5F661007D3C79 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FBE10C2024B5F665007D3C79 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				FBEE2C7924B66DC800910BC6 /* GoogleService-Info.plist */,
+				FBE10C1724B5F44C007D3C79 /* Info.plist */,
+				FBE10C0B24B5F44B007D3C79 /* SceneDelegate.swift */,
+				FBE10C0924B5F44B007D3C79 /* AppDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		FBE10C2124B5F670007D3C79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBE10C1424B5F44C007D3C79 /* LaunchScreen.storyboard */,
+				FBE10C0F24B5F44B007D3C79 /* Main.storyboard */,
+				FBDF516F24B75B450021B895 /* PinkButton.swift */,
+				FBAC348524B75EB9002641B4 /* BlueButton.swift */,
+				FBAC348724B76456002641B4 /* TitleLabel.swift */,
+				FBAC348924B766DF002641B4 /* MainTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FBE10C2224B5F67F007D3C79 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FBE10C1224B5F44C007D3C79 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FBE10C2324B5F698007D3C79 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FBDF516824B73E430021B895 /* Main */,
+				FBDF516724B73E210021B895 /* Login */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBE10C1A24B5F44C007D3C79 /* Build configuration list for PBXNativeTarget "Flash Dating 001" */;
 			buildPhases = (
+				4519AE773DD7B6B134798045 /* [CP] Check Pods Manifest.lock */,
 				FBE10C0224B5F44B007D3C79 /* Sources */,
 				FBE10C0324B5F44B007D3C79 /* Frameworks */,
 				FBE10C0424B5F44B007D3C79 /* Resources */,
+				A68902AD4F10831983C5BC6B /* [CP] Embed Pods Frameworks */,
+				ECDD82A662FFB1E7BB192B9F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBEE2C7A24B66DC800910BC6 /* GoogleService-Info.plist in Resources */,
 				FBE10C1624B5F44C007D3C79 /* LaunchScreen.storyboard in Resources */,
 				FBE10C1324B5F44C007D3C79 /* Assets.xcassets in Resources */,
 				FBE10C1124B5F44B007D3C79 /* Main.storyboard in Resources */,
@@ -133,14 +267,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4519AE773DD7B6B134798045 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Flash Dating 001-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A68902AD4F10831983C5BC6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flash Dating 001/Pods-Flash Dating 001-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flash Dating 001/Pods-Flash Dating 001-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Flash Dating 001/Pods-Flash Dating 001-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECDD82A662FFB1E7BB192B9F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flash Dating 001/Pods-Flash Dating 001-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flash Dating 001/Pods-Flash Dating 001-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Flash Dating 001/Pods-Flash Dating 001-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FBE10C0224B5F44B007D3C79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBE10C0E24B5F44B007D3C79 /* ViewController.swift in Sources */,
+				FBEE2C7C24B6F64400910BC6 /* RegisterViewController.swift in Sources */,
+				FBDF516424B732070021B895 /* FillNameViewController.swift in Sources */,
 				FBE10C0A24B5F44B007D3C79 /* AppDelegate.swift in Sources */,
+				FBAC348824B76456002641B4 /* TitleLabel.swift in Sources */,
+				FBDF517024B75B450021B895 /* PinkButton.swift in Sources */,
+				FBE10C2924B601A4007D3C79 /* User.swift in Sources */,
 				FBE10C0C24B5F44B007D3C79 /* SceneDelegate.swift in Sources */,
+				FBE10C2D24B60ABB007D3C79 /* LoginViewController.swift in Sources */,
+				FBAC348624B75EB9002641B4 /* BlueButton.swift in Sources */,
+				FBE10C2B24B603C3007D3C79 /* ProfileViewController.swift in Sources */,
+				FBDF516224B72EB00021B895 /* VerifyViewController.swift in Sources */,
+				FBDF516624B73D4E0021B895 /* ForgotPasswordViewController.swift in Sources */,
+				FBAC348A24B766DF002641B4 /* MainTextField.swift in Sources */,
+				FBE10C2524B5FE7A007D3C79 /* HomeViewController.swift in Sources */,
+				FBDF516E24B7555E0021B895 /* StartPageViewController.swift in Sources */,
+				FBE10C2724B60184007D3C79 /* CurrentProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,10 +488,11 @@
 		};
 		FBE10C1B24B5F44C007D3C79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F36EC2816EDD87BEADD54F7E /* Pods-Flash Dating 001.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Flash Dating 001/Info.plist";
+				INFOPLIST_FILE = "Flash Dating 001/App Delegate/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,10 +506,11 @@
 		};
 		FBE10C1C24B5F44C007D3C79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED411B9E8767525F0F5685DA /* Pods-Flash Dating 001.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Flash Dating 001/Info.plist";
+				INFOPLIST_FILE = "Flash Dating 001/App Delegate/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
