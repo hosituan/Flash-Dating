@@ -18,7 +18,6 @@ class FillNameViewController: UIViewController {
             let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
             changeRequest?.displayName = nameTextField.text!
             changeRequest?.commitChanges { (error) in
-                
             }
             self.performSegue(withIdentifier: "signUpDoneSegue", sender: nil)
         }
@@ -26,10 +25,7 @@ class FillNameViewController: UIViewController {
             let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
             changeRequest?.displayName = nameTextField.text!
             changeRequest?.commitChanges { (error) in
-                
             }
-            let presentedBy = presentingViewController as? ProfileViewController
-            presentedBy?.update()
             self.dismiss(animated: true, completion: nil)
         }
         

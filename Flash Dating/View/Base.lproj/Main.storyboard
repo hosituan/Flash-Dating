@@ -152,7 +152,7 @@
             <objects>
                 <viewController id="62F-vg-gWG" customClass="ProfileViewController" customModule="Flash_Dating_001" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B3W-Mg-nKr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xve-Yq-gEI" userLabel="Profile View">
@@ -273,7 +273,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7o2-zx-ggH" userLabel="Body View">
-                                <rect key="frame" x="0.0" y="150" width="375" height="517"/>
+                                <rect key="frame" x="0.0" y="150" width="375" height="497"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IB-I4-TlB" userLabel="Matched">
                                         <rect key="frame" x="15" y="10" width="163" height="90"/>
@@ -693,7 +693,6 @@
                         <outlet property="nameTextField" destination="KEv-YA-YxO" id="gSi-hh-WPH"/>
                         <segue destination="JXx-WD-86Z" kind="show" identifier="signUpDoneSegue" id="YsN-9R-1LD"/>
                         <segue destination="SkE-7c-TXq" kind="show" identifier="loginDoneSegue" id="bAw-HD-192"/>
-                        <segue destination="62F-vg-gWG" kind="presentation" identifier="openProfileSegue" modalPresentationStyle="fullScreen" id="FDJ-sH-PbB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSZ-tS-inm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -977,7 +976,6 @@
         <segue reference="bAw-HD-192"/>
         <segue reference="pVM-Sm-y9d"/>
         <segue reference="YsN-9R-1LD"/>
-        <segue reference="FDJ-sH-PbB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Refresh" width="29" height="29"/>

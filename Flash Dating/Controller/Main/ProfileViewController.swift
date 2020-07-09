@@ -39,18 +39,33 @@ class ProfileViewController: UIViewController {
         self.performSegue(withIdentifier: "openFillNameSegue", sender: nil)
     }
     @IBAction func refreshData(_ sender: UIButton) {
-         loadData()
+        loadData()
+        let userInfo = Auth.auth().currentUser
+        let data = try? Data(contentsOf: (userInfo?.photoURL!)!)
+        print(data)
+        //profileImage.image = UIImage(data: data!)
+    }
+    @IBAction func tapChangeLabel(sender: UITapGestureRecognizer) {
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        changeRequest?.photoURL = URL(fileURLWithPath: "https://firebase.google.com/downloads/brand-guidelines/PNG/logo-vertical.png?")
+        changeRequest?.commitChanges { (error) in
+        }
+
     }
     // MARK: - Configure
     func loadData() {
         let userInfo = Auth.auth().currentUser
         nameLabel.text = userInfo?.displayName
         emailLabel.text = userInfo?.email
+
         
     }
-    func update() {
-        nameLabel.text = "abc"
+    func configure() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ProfileViewController.tapChangeLabel))
+        changeProfilePicture.isUserInteractionEnabled = true
+        changeProfilePicture.addGestureRecognizer(tap)
     }
+
     
     
     
@@ -58,6 +73,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        configure()
     }
     override func viewDidAppear(_ animated: Bool) {
         print("appear")
