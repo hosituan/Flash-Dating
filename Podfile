@@ -9,14 +9,12 @@ target 'Flash Dating' do
 pod 'Firebase/Auth' 
 pod 'FirebaseUI'
 pod 'FirebaseUI/Auth'
-
-pod 'FirebaseUI/Google'
 pod 'FirebaseUI/Facebook'
-pod 'FirebaseUI/OAuth' # Used for Sign in with Apple, Twitter, etc
-pod 'FirebaseUI/Phone'
+
 pod 'Firebase/Firestore'
 pod 'Firebase/Analytics'
 pod 'SkyFloatingLabelTextField', '~> 3.0'
+pod 'Firebase/Storage'
   # Pods for Flash Dating
 
 end

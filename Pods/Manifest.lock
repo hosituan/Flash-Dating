@@ -420,12 +420,10 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Firestore
+  - Firebase/Storage
   - FirebaseUI
   - FirebaseUI/Auth
   - FirebaseUI/Facebook
-  - FirebaseUI/Google
-  - FirebaseUI/OAuth
-  - FirebaseUI/Phone
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - SkyFloatingLabelTextField (~> 3.0)
@@ -499,6 +497,6 @@ SPEC CHECKSUMS:
   SDWebImage: 112503ec94a5a2a41869503844a15e8d8f1ead5c
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
 
-PODFILE CHECKSUM: e8777c891333febef177b973dd78be409a4504db
+PODFILE CHECKSUM: f202f65b618d8bf442f5d7843af0af68b3549458
 
 COCOAPODS: 1.9.3

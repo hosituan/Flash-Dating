@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseUI
+import FirebaseDatabase
 
 class RegisterViewController: UIViewController {
 
@@ -20,7 +21,7 @@ class RegisterViewController: UIViewController {
     @IBAction func signUpButton(_ sender: UIButton) {
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!)
         { (authResult, error) in
-          if let error = error as? NSError {
+            if let error = error as NSError? {
             switch AuthErrorCode(rawValue: error.code) {
             case .operationNotAllowed:
                 break
@@ -39,9 +40,27 @@ class RegisterViewController: UIViewController {
             }
           }
           else {
+                if let authUser = authResult {
+                    let dict: Dictionary<String, Any>  = [
+                        "uid": authUser.user.uid,
+                        "email": authResult?.user.email,
+                        "profileImageUrl": "",
+                        "status": "",
+                        
+                    ]
+                    Database.database().reference().child("user").child(authUser.user.uid).updateChildValues(dict, withCompletionBlock: {
+                        (error, ref) in
+                        if error == nil {
+                            print("Done")
+                        }
+                    })
+                    
+                }
+                
+                
             self.performSegue(withIdentifier: "openFillNameSegue", sender: nil)
                 
-                }
+            }
         }
     }
     override func viewDidLoad() {
@@ -68,3 +87,5 @@ class RegisterViewController: UIViewController {
     */
 
 }
+
+

@@ -19,7 +19,7 @@ class FillNameViewController: UIViewController {
             changeRequest?.displayName = nameTextField.text!
             changeRequest?.commitChanges { (error) in
             }
-            self.performSegue(withIdentifier: "signUpDoneSegue", sender: nil)
+            self.performSegue(withIdentifier: "editImageSegue", sender: nil)
         }
         else {
             let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
