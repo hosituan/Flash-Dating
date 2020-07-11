@@ -9,13 +9,15 @@
 import UIKit
 import Firebase
 
-class FillNameViewController: UIViewController {
+class FillNameViewController: ViewController {
 
     @IBOutlet var nameTextField: UITextField!
 
     @IBAction func confirmButton(_ sender: UIButton) {
         if nameTextField.text != "" {
+            ERProgressHud.sharedInstance.show(withTitle: "Loading...")
             if Auth.auth().currentUser?.displayName == nil {
+                ERProgressHud.sharedInstance.hide()
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                 changeRequest?.displayName = nameTextField.text!
                 changeRequest?.commitChanges { (error) in
@@ -23,6 +25,7 @@ class FillNameViewController: UIViewController {
                 self.performSegue(withIdentifier: "loginDoneSegue", sender: nil)
             }
             else {
+                ERProgressHud.sharedInstance.hide()
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                 changeRequest?.displayName = nameTextField.text!
                 changeRequest?.commitChanges { (error) in

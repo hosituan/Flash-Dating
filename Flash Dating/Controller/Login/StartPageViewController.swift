@@ -8,13 +8,18 @@
 
 import UIKit
 
-class StartPageViewController: UIViewController {
+class StartPageViewController: ViewController {
 
    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationController?.navigationBar.tintColor = .systemPink
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
 }

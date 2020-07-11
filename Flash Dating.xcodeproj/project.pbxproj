@@ -10,6 +10,8 @@
 		094C24C9CC2F8CCE89D7C250 /* Pods_Flash_Dating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3213E528A98B443EAAB8938 /* Pods_Flash_Dating.framework */; };
 		FB0CD00224B7B43D0049657F /* EditImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CD00124B7B43D0049657F /* EditImageViewController.swift */; };
 		FB0CD00424B83F340049657F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB0CD00324B83F340049657F /* GoogleService-Info.plist */; };
+		FB4DEBFE24BA268A004E66F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DEBFD24BA268A004E66F4 /* ViewController.swift */; };
+		FB4DEC0324BA3C95004E66F4 /* ERProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DEC0224BA3C95004E66F4 /* ERProgressHud.swift */; };
 		FBAC348624B75EB9002641B4 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC348524B75EB9002641B4 /* BlueButton.swift */; };
 		FBAC348824B76456002641B4 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC348724B76456002641B4 /* TitleLabel.swift */; };
 		FBAC348F24B7817B002641B4 /* Metropolis-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBAC348E24B7817B002641B4 /* Metropolis-Black.otf */; };
@@ -39,6 +41,8 @@
 		F36EC2816EDD87BEADD54F7E /* Pods-Flash Dating 001.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Dating 001.debug.xcconfig"; path = "Target Support Files/Pods-Flash Dating 001/Pods-Flash Dating 001.debug.xcconfig"; sourceTree = "<group>"; };
 		FB0CD00124B7B43D0049657F /* EditImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageViewController.swift; sourceTree = "<group>"; };
 		FB0CD00324B83F340049657F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FB4DEBFD24BA268A004E66F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB4DEC0224BA3C95004E66F4 /* ERProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERProgressHud.swift; sourceTree = "<group>"; };
 		FBAC348524B75EB9002641B4 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 		FBAC348724B76456002641B4 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		FBAC348E24B7817B002641B4 /* Metropolis-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Black.otf"; sourceTree = "<group>"; };
@@ -103,6 +107,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FB4DEC0124BA3C88004E66F4 /* ERProgressHud */ = {
+			isa = PBXGroup;
+			children = (
+				FB4DEC0224BA3C95004E66F4 /* ERProgressHud.swift */,
+			);
+			path = ERProgressHud;
+			sourceTree = "<group>";
+		};
 		FBAC348B24B78146002641B4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +159,7 @@
 				FBEE2C7B24B6F64400910BC6 /* RegisterViewController.swift */,
 				FBDF516324B732070021B895 /* FillNameViewController.swift */,
 				FBDF516D24B7555E0021B895 /* StartPageViewController.swift */,
+				FB4DEBFD24BA268A004E66F4 /* ViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -242,6 +255,7 @@
 		FBE10C2324B5F698007D3C79 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FB4DEC0124BA3C88004E66F4 /* ERProgressHud */,
 				FBDF516824B73E430021B895 /* Main */,
 				FBDF516724B73E210021B895 /* Login */,
 			);
@@ -384,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB0CD00224B7B43D0049657F /* EditImageViewController.swift in Sources */,
+				FB4DEC0324BA3C95004E66F4 /* ERProgressHud.swift in Sources */,
 				FBEE2C7C24B6F64400910BC6 /* RegisterViewController.swift in Sources */,
 				FBDF516424B732070021B895 /* FillNameViewController.swift in Sources */,
 				FBE10C0A24B5F44B007D3C79 /* AppDelegate.swift in Sources */,
@@ -392,6 +407,7 @@
 				FBE10C2924B601A4007D3C79 /* User.swift in Sources */,
 				FBE10C0C24B5F44B007D3C79 /* SceneDelegate.swift in Sources */,
 				FBE10C2D24B60ABB007D3C79 /* LoginViewController.swift in Sources */,
+				FB4DEBFE24BA268A004E66F4 /* ViewController.swift in Sources */,
 				FBAC348624B75EB9002641B4 /* BlueButton.swift in Sources */,
 				FBE10C2B24B603C3007D3C79 /* ProfileViewController.swift in Sources */,
 				FBDF516224B72EB00021B895 /* VerifyViewController.swift in Sources */,
@@ -546,7 +562,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9EGC55R6Z;
 				INFOPLIST_FILE = "Flash Dating/App Delegate/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -566,7 +582,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U9EGC55R6Z;
 				INFOPLIST_FILE = "Flash Dating/App Delegate/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

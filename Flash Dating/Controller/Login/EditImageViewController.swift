@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseStorage
 
-class EditImageViewController: UIViewController {
+class EditImageViewController: ViewController {
     
     @IBOutlet var imageView: UIImageView!
     var isChanged:Bool = false;
