@@ -8,10 +8,12 @@
 
 import UIKit
 import Firebase
+import FBSDKLoginKit
 
 class ProfileViewController: UIViewController {
     
     //MARK: -- Declare
+    
     
     @IBOutlet var scrollView: UIScrollView!
     var refreshControl: UIRefreshControl!
@@ -42,6 +44,7 @@ class ProfileViewController: UIViewController {
         do {
             ERProgressHud.sharedInstance.show(withTitle: "Loading...")
             try Auth.auth().signOut()
+            AccessToken.current = nil
             ERProgressHud.sharedInstance.hide()
         } catch {
           print("Sign out error")
@@ -64,6 +67,7 @@ class ProfileViewController: UIViewController {
 
     }
     @IBAction func tapLogout(sender: UITapGestureRecognizer) {
+
         do {
             ERProgressHud.sharedInstance.show(withTitle: "Loading...")
             try Auth.auth().signOut()
@@ -150,6 +154,8 @@ class ProfileViewController: UIViewController {
 
         
         _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(loadImage), userInfo: nil, repeats: false)
+        
+        
         
     }
     

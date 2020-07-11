@@ -27,14 +27,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t1n-AM-6Ny">
-                                <rect key="frame" x="10" y="124" width="394" height="433"/>
+                                <rect key="frame" x="10" y="168" width="394" height="433"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="433" id="us3-9M-EbJ"/>
                                 </constraints>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CEL-ZR-bVh">
-                                <rect key="frame" x="141.5" y="54" width="131" height="31"/>
+                                <rect key="frame" x="141.5" y="98" width="131" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Jrn-Ch-tkX"/>
                                     <constraint firstAttribute="width" constant="131" id="pT1-8E-vXK"/>
@@ -45,7 +45,7 @@
                                 </segments>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gg-c1-8lR">
-                                <rect key="frame" x="14" y="385" width="386" height="172"/>
+                                <rect key="frame" x="14" y="385" width="386" height="216"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EA2-cu-3fL">
                                         <rect key="frame" x="60" y="40" width="45" height="21"/>
@@ -72,7 +72,7 @@
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryB-Y5-qH6">
-                                <rect key="frame" x="50" y="585" width="70" height="50"/>
+                                <rect key="frame" x="50" y="629" width="70" height="50"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="jgk-Zz-MBl"/>
@@ -84,7 +84,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybu-W0-U6L">
-                                <rect key="frame" x="294" y="582" width="70" height="50"/>
+                                <rect key="frame" x="294" y="626" width="70" height="50"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="WSC-QG-8Wf"/>
@@ -845,10 +845,14 @@
                                         <color key="backgroundColor" red="0.0" green="0.60559853859589041" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Rkv-97-u8Q"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ztI-8p-Bmg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="SIGN UP WITH FACEBOOK"/>
+                                        <connections>
+                                            <action selector="fbLoginButton:" destination="K6U-x8-PX2" eventType="touchUpInside" id="a1T-oC-bbQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -879,6 +883,10 @@
                         <viewLayoutGuide key="safeArea" id="bmo-vZ-xO8"/>
                     </view>
                     <navigationItem key="navigationItem" id="LAs-Nq-A6z"/>
+                    <connections>
+                        <outlet property="fbLoginButton" destination="VSL-SJ-Avm" id="MWD-GH-nYm"/>
+                        <segue destination="SkE-7c-TXq" kind="show" identifier="signInWithFBSegue" id="qRg-bC-a7M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuA-7h-GcV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1085,7 +1093,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Fl7-xD-OXZ"/>
-        <segue reference="RJO-Pp-2qR"/>
+        <segue reference="qRg-bC-a7M"/>
         <segue reference="pVM-Sm-y9d"/>
     </inferredMetricsTieBreakers>
     <resources>
