@@ -26,15 +26,10 @@ class EditImageViewController: UIViewController {
     @IBAction func selectButton(_ sender: UIButton) {
         
         
+        
         if isChanged == true {
-            if Auth.auth().currentUser?.photoURL != nil {
-                setImage()
-                self.dismiss(animated: true, completion: nil)
-            }
-            else {
-                setImage()
-                self.performSegue(withIdentifier: "signUpDoneSegue", sender: nil)
-            }
+            setImage()
+            self.dismiss(animated: true, completion: nil)
         }
         else {
             let alert = UIAlertController(title: "Message", message: "You have not choosen Profile Image", preferredStyle: .alert)
@@ -56,7 +51,7 @@ class EditImageViewController: UIViewController {
         metadata.contentType = "image/jpg"
         storageProfileRef.putData(imageData, metadata: metadata, completion: {
             (StorageMetadata, error) in
-            if error == nil {
+            if error != nil {
                 print(error?.localizedDescription as Any)
                 return
             }

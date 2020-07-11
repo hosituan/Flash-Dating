@@ -43,7 +43,7 @@ class RegisterViewController: UIViewController {
                 if let authUser = authResult {
                     let dict: Dictionary<String, Any>  = [
                         "uid": authUser.user.uid,
-                        "email": authResult?.user.email,
+                        "email": authUser.user.email!,
                         "profileImageUrl": "",
                         "status": "",
                         

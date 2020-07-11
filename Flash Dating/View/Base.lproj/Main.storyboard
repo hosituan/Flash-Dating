@@ -523,12 +523,13 @@
                         <outlet property="totalLoveView" destination="3bR-4x-laG" id="CKh-hL-cNd"/>
                         <segue destination="RJp-rI-yGG" kind="presentation" identifier="logoutSegue" modalPresentationStyle="fullScreen" id="gqX-sL-nT0"/>
                         <segue destination="YtY-MK-2CU" kind="showDetail" identifier="openFillNameSegue" id="pVM-Sm-y9d"/>
-                        <segue destination="mLP-Mb-sqk" kind="show" identifier="openEditImageSegue" id="1Ki-LD-3WY"/>
+                        <segue destination="mLP-Mb-sqk" kind="showDetail" identifier="openEditImageSegue" id="1Ki-LD-3WY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q41-m0-K5M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="8BK-Dg-wTJ"/>
             </objects>
-            <point key="canvasLocation" x="1789.5999999999999" y="-1096.1019490254873"/>
+            <point key="canvasLocation" x="1980" y="-818"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="u8E-DP-dCg">
@@ -571,7 +572,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXY-Dh-BhC">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="170"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log Into Your Account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVh-S8-g44" customClass="TitleLabel" customModule="Flash_Dating" customModuleProvider="target">
                                         <rect key="frame" x="8" y="38" width="325" height="123"/>
@@ -587,7 +588,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Gv-bn-T5s">
-                                <rect key="frame" x="0.0" y="170" width="375" height="497"/>
+                                <rect key="frame" x="0.0" y="214" width="375" height="453"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7rX-JB-U5P" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                         <rect key="frame" x="30" y="25" width="315" height="60"/>
@@ -740,7 +741,6 @@
                     <connections>
                         <outlet property="nameTextField" destination="KEv-YA-YxO" id="gSi-hh-WPH"/>
                         <segue destination="SkE-7c-TXq" kind="show" identifier="loginDoneSegue" id="bAw-HD-192"/>
-                        <segue destination="mLP-Mb-sqk" kind="presentation" identifier="editImageSegue" modalPresentationStyle="fullScreen" id="mZj-aJ-P8G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSZ-tS-inm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -784,7 +784,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqY-Lq-FQ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="446" y="-1096"/>
+            <point key="canvasLocation" x="729" y="-1162"/>
         </scene>
         <!--Start Page View Controller-->
         <scene sceneID="Uqe-de-Z3u">
@@ -1008,7 +1008,7 @@
             <objects>
                 <viewController id="mLP-Mb-sqk" customClass="EditImageViewController" customModule="Flash_Dating" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MBS-zI-gUb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Qpt-HE-rm0">
@@ -1058,7 +1058,6 @@
                     <navigationItem key="navigationItem" id="J1Q-zf-nrh"/>
                     <connections>
                         <outlet property="imageView" destination="Qpt-HE-rm0" id="iXd-rg-f2a"/>
-                        <segue destination="JXx-WD-86Z" kind="presentation" identifier="signUpDoneSegue" modalPresentationStyle="fullScreen" id="nSL-WV-X0B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJL-ug-nSE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1086,10 +1085,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mZj-aJ-P8G"/>
         <segue reference="bAw-HD-192"/>
-        <segue reference="bgQ-VJ-ZT1"/>
-        <segue reference="nSL-WV-X0B"/>
+        <segue reference="vJE-S5-sOg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Address" width="24" height="24"/>
