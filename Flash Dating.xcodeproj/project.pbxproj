@@ -178,10 +178,18 @@
 		FBDF516824B73E430021B895 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				FBE10C2424B5FE7A007D3C79 /* HomeViewController.swift */,
+				FBE0A1EC24BB9B0500BF5838 /* Home */,
 				FBD781B524BB6A7200833192 /* Profile */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		FBE0A1EC24BB9B0500BF5838 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FBE10C2424B5FE7A007D3C79 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		FBE10BFD24B5F44B007D3C79 = {

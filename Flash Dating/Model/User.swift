@@ -8,19 +8,9 @@
 
 import Foundation
 
-struct User {
-    var username: String
-    var password: String
-    var name: String
-    var age: Int
+struct User: Codable {
+    var email: String
+    var photoURL: String
+    var uid: String
     var location: String
-    
-    init(username: String, password: String, name: String, age: Int, location: String)
-    {
-        self.username = username
-        self.password = password
-        self.name = name
-        self.age = age
-        self.location = location
-    }
 }

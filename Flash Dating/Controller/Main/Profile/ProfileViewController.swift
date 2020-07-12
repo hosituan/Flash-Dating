@@ -175,8 +175,6 @@ class ProfileViewController: UIViewController {
         
         
         
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -218,7 +216,6 @@ extension ProfileViewController:  CLLocationManagerDelegate {
             "uid": userInfo!.uid,
             "email": userInfo!.email!,
             "profileImageUrl": userInfo!.photoURL!.absoluteString,
-            "status": "",
             "location":"\(locValue.latitude),\(locValue.longitude)",
             
         ]
