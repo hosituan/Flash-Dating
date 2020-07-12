@@ -59,8 +59,10 @@ class ProfileViewController: UIViewController {
         self.performSegue(withIdentifier: "openFillNameSegue", sender: nil)
     }
     @IBAction func refreshData(_ sender: UIButton) {
+        ERProgressHud.sharedInstance.show(withTitle: "Loading...")
         loadData()
         loadImage()
+        ERProgressHud.sharedInstance.hide()
     }
     @IBAction func tapChangeImg(sender: UITapGestureRecognizer) {
         self.performSegue(withIdentifier: "openEditImageSegue", sender: nil)
@@ -71,6 +73,7 @@ class ProfileViewController: UIViewController {
         do {
             ERProgressHud.sharedInstance.show(withTitle: "Loading...")
             try Auth.auth().signOut()
+            AccessToken.current = nil
             ERProgressHud.sharedInstance.hide()
         } catch {
           print("Sign out error")
@@ -133,7 +136,7 @@ class ProfileViewController: UIViewController {
 
 
         
-
+        ERProgressHud.sharedInstance.show(withTitle: "Loading...")
         refreshControl?.endRefreshing()
         loadData()
        _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(loadImage), userInfo: nil, repeats: false)
@@ -144,6 +147,7 @@ class ProfileViewController: UIViewController {
     //MARK: -- Start
     override func viewDidLoad() {
         super.viewDidLoad()
+        ERProgressHud.sharedInstance.show(withTitle: "Loading...")
         setup()
         loadData()
         scrollView.alwaysBounceVertical = true
