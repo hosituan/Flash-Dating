@@ -50,6 +50,7 @@ class RegisterViewController: ViewController {
                             "email": authUser.user.email!,
                             "profileImageUrl": "",
                             "status": "",
+                            "location":"",
                             
                         ]
                         Database.database().reference().child("user").child(authUser.user.uid).updateChildValues(dict, withCompletionBlock: {

@@ -9,11 +9,17 @@
 import UIKit
 import Firebase
 import FBSDKLoginKit
+import CoreLocation
 
 class ProfileViewController: UIViewController {
     
     //MARK: -- Declare
     
+    let userInfo = Auth.auth().currentUser
+    
+    let locationManager = CLLocationManager()
+    
+    @IBOutlet var locationLabel: UILabel!
     
     @IBOutlet var scrollView: UIScrollView!
     var refreshControl: UIRefreshControl!
@@ -27,18 +33,26 @@ class ProfileViewController: UIViewController {
     @IBOutlet var totalLoveView: UIView!
     //Third View
     
+    //Button
+    @IBOutlet var addressButton: UIButton!
+    
+    @IBOutlet var languageButton: UIButton!
+    
+    @IBOutlet var logoutButton: UIButton!
+    //--
     @IBOutlet var addressView: UIView!
     
     @IBOutlet var languageView: UIView!
     @IBOutlet var logoutView: UIView!
+    
     @IBOutlet var addressBigView: UIView!
     @IBOutlet var languageBigView: UIView!
     @IBOutlet var logoutBigView: UIView!
     //MARK: -- This is Main Action
+
     
-    @IBAction func changeAddressButton(_ sender: UIButton) {
-        
-    }
+    
+
     
     @IBAction func logoutButton(_ sender: UIButton) {
         do {
@@ -69,24 +83,20 @@ class ProfileViewController: UIViewController {
 
     }
     @IBAction func tapLogout(sender: UITapGestureRecognizer) {
-
-        do {
-            ERProgressHud.sharedInstance.show(withTitle: "Loading...")
-            try Auth.auth().signOut()
-            AccessToken.current = nil
-            ERProgressHud.sharedInstance.hide()
-        } catch {
-          print("Sign out error")
-        }
-        self.performSegue(withIdentifier: "logoutSegue", sender: nil)
+        logoutButton.sendActions(for: .touchUpInside)
 
     }
+    @IBAction func tapAddress(_ sender: UIButton) {
+        addressButton.sendActions(for: .touchUpInside)
+    }
+
+    
     
     
     // MARK: - Configure
     @objc func loadData() {
         //ERProgressHud.sharedInstance.show(withTitle: "Loading...")
-        let userInfo = Auth.auth().currentUser
+        
         nameLabel.text = userInfo?.displayName
         emailLabel.text = userInfo?.email
     }
@@ -118,7 +128,11 @@ class ProfileViewController: UIViewController {
         //set view
         matchView.layer.cornerRadius = 10
         totalLoveView.layer.cornerRadius = 10
+        
         addressView.layer.cornerRadius = addressView.layer.frame.size.width/2
+        let tapAddress = UITapGestureRecognizer(target: self, action: #selector(ProfileViewController.tapAddress))
+        addressBigView.addGestureRecognizer(tapAddress)
+        
         languageView.layer.cornerRadius = languageView.layer.frame.size.width/2
         
         logoutView.layer.cornerRadius = logoutView.layer.frame.size.width/2
@@ -155,9 +169,11 @@ class ProfileViewController: UIViewController {
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
         self.scrollView.addSubview(refreshControl)
-
         
         _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(loadImage), userInfo: nil, repeats: false)
+        
+        
+        
         
         
         
@@ -165,8 +181,85 @@ class ProfileViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        getLocation()
+    }
     override func viewDidDisappear(_ animated: Bool) {
+        
     }
     
 
+    
+    
+}
+    //MARK:-- Location
+
+extension ProfileViewController:  CLLocationManagerDelegate {
+    func getLocation () {
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
+        
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.requestLocation()
+        }
+
+
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else {
+            print("error")
+            return
+        }
+        let dict: Dictionary<String, Any>  = [
+            "uid": userInfo!.uid,
+            "email": userInfo!.email!,
+            "profileImageUrl": userInfo!.photoURL!.absoluteString,
+            "status": "",
+            "location":"\(locValue.latitude),\(locValue.longitude)",
+            
+        ]
+        Database.database().reference().child("user").child(userInfo!.uid).updateChildValues(dict, withCompletionBlock: {
+            (error, ref) in
+            if error == nil {
+                print("Done Update Location")
+            }
+        })
+        getNameLocation(lat: locValue.latitude, long: locValue.longitude)
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Failed to find user's location: \(error.localizedDescription)")
+    }
+    
+    func getNameLocation(lat:Double,long:Double) {
+        CLGeocoder().reverseGeocodeLocation(CLLocation(latitude: Double(lat), longitude: Double(long)), completionHandler: { (placemarks, error) -> Void in
+            if error != nil {
+                return
+            }
+            else {
+                var location = ""
+                let pm = placemarks![0]
+                
+                if let addrList = pm.addressDictionary?["FormattedAddressLines"] as? [String] {
+                    let addressString = addrList.joined(separator: ", ")
+                    print(addressString)
+
+                }
+                
+                if pm.country != nil && pm.administrativeArea != nil   {
+                    
+                    let upperCaseCity = pm.administrativeArea!.filter({$0.isUppercase})
+                    location = "\(pm.subLocality!), \(pm.subAdministrativeArea!), \(upperCaseCity)"
+                }
+                else{
+                    location = "NO_ADDRESS_FOUND"
+                }
+                print(location)
+                self.locationLabel.text = location
+            }
+        })
+    }
 }
