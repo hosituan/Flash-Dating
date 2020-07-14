@@ -10,7 +10,11 @@ import Foundation
 
 struct User: Codable {
     var email: String
+    var name: String
     var photoURL: String
     var uid: String
     var location: String
+    var totalMatched:Int = 0
+    var totalLiked:Int = 0
+    var distance: Double = 0.0
 }

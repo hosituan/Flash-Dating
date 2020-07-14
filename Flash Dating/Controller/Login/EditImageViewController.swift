@@ -63,14 +63,13 @@ class EditImageViewController: ViewController {
                 changeRequest?.photoURL = URL(string: metaImageUrl)
                 changeRequest?.commitChanges { (error) in
                 }
-                print(metaImageUrl)
     
-                    Database.database().reference().child("user").child(Auth.auth().currentUser!.uid).updateChildValues(["profileImageUrl": metaImageUrl], withCompletionBlock: {
-                        (error, ref) in
-                        if error == nil {
-                            print("Done")
-                        }
-                    })
+                Database.database().reference().child("user").child(Auth.auth().currentUser!.uid).updateChildValues(["profileImageUrl": metaImageUrl], withCompletionBlock: {
+                    (error, ref) in
+                    if error == nil {
+                        print("Done")
+                    }
+                })
                 
 
             }

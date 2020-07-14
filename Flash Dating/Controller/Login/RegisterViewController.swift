@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseUI
 import FirebaseDatabase
+import CoreLocation
 
 class RegisterViewController: ViewController {
 
@@ -43,11 +44,13 @@ class RegisterViewController: ViewController {
                     }
               }
               else {
+                    
                     ERProgressHud.sharedInstance.hide()
                     if let authUser = authResult {
                         let dict: Dictionary<String, Any>  = [
                             "uid": authUser.user.uid,
                             "email": authUser.user.email!,
+                            "name": "",
                             "profileImageUrl": "",
                             "status": "",
                             "location":"",
@@ -93,5 +96,6 @@ class RegisterViewController: ViewController {
 
 
 }
+
 
 

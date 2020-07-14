@@ -205,7 +205,6 @@ extension ProfileViewController:  CLLocationManagerDelegate {
             locationManager.requestLocation()
         }
 
-
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else {
@@ -215,9 +214,9 @@ extension ProfileViewController:  CLLocationManagerDelegate {
         let dict: Dictionary<String, Any>  = [
             "uid": userInfo!.uid,
             "email": userInfo!.email!,
-            "profileImageUrl": userInfo!.photoURL!.absoluteString,
+            "name": userInfo!.displayName!,
+            "profileImageUrl": userInfo!.photoURL!.absoluteString ?? nil,
             "location":"\(locValue.latitude),\(locValue.longitude)",
-            
         ]
         Database.database().reference().child("user").child(userInfo!.uid).updateChildValues(dict, withCompletionBlock: {
             (error, ref) in
