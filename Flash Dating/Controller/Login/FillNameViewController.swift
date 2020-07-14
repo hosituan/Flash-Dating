@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import CoreLocation
 
 class FillNameViewController: ViewController {
 
@@ -20,44 +19,54 @@ class FillNameViewController: ViewController {
     @IBAction func confirmButton(_ sender: UIButton) {
         if nameTextField.text != "" {
             ERProgressHud.sharedInstance.show(withTitle: "Loading...")
+            
+            // This is create name
             if Auth.auth().currentUser?.displayName == nil {
-                ERProgressHud.sharedInstance.hide()
+                
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                 changeRequest?.displayName = nameTextField.text!
+                //this is default image
                 changeRequest?.photoURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/flash-dating-001.appspot.com/o/profile%2FhffGUjwyCNV2uAMnnrJh1Emdrwk1?alt=media&token=37363ae0-adb8-4e10-930f-e5918fd20b7c")
                 changeRequest?.commitChanges { (error) in
                 }
-                let dict: Dictionary<String, Any>  = [
-                    "uid": Auth.auth().currentUser!.uid,
-                    "name": nameTextField.text!,
-
-                ]
-                Database.database().reference().child("user").child(Auth.auth().currentUser!.uid).updateChildValues(dict, withCompletionBlock: {
+                
+                //update name in database
+                Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).updateChildValues(["name": nameTextField.text!], withCompletionBlock: {
                     (error, ref) in
                     if error == nil {
-                        print("Done")
+                        print("Done Update Name")
                     }
                 })
-                
-                
+                //hide loading
+                ERProgressHud.sharedInstance.hide()
                 self.performSegue(withIdentifier: "loginDoneSegue", sender: nil)
             }
+            // This is change Name
             else {
-                ERProgressHud.sharedInstance.hide()
+                //Update name in Authentication
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                 changeRequest?.displayName = nameTextField.text!
                 changeRequest?.commitChanges { (error) in
                 }
+                //Update name in database
+                Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).updateChildValues(["name": nameTextField.text!], withCompletionBlock: {
+                    (error, ref) in
+                    if error == nil {
+                        print("Done Update Name")
+                    }
+                })
+                //hide loading
+                ERProgressHud.sharedInstance.hide()
                 self.dismiss(animated: true, completion: nil)
             }
         }
+        //show alert 
         else {
-            let alert = UIAlertController(title: "Message", message: "You have not fill name", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Message", message: "You haven't enter your name!", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(okAction)
             self.present(alert, animated: true, completion: nil)
         }
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()

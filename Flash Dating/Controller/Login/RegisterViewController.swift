@@ -22,8 +22,10 @@ class RegisterViewController: ViewController {
     @IBAction func signUpButton(_ sender: UIButton) {
         if (passwordTextField.text == repasswordTextField.text) {
             ERProgressHud.sharedInstance.show(withTitle: "Loading...")
+            //create new user
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!)
             { (authResult, error) in
+                //handle error
                 if let error = error as NSError? {
                     ERProgressHud.sharedInstance.hide()
                     switch AuthErrorCode(rawValue: error.code) {
@@ -44,28 +46,45 @@ class RegisterViewController: ViewController {
                     }
               }
               else {
-                    
-                    ERProgressHud.sharedInstance.hide()
                     if let authUser = authResult {
+                        //define field in users table
                         let dict: Dictionary<String, Any>  = [
                             "uid": authUser.user.uid,
                             "email": authUser.user.email!,
                             "name": "",
-                            "profileImageUrl": "",
-                            "status": "",
-                            "location":"",
-                            
+                            "profileImageUrl": "https://firebasestorage.googleapis.com/v0/b/flash-dating-001.appspot.com/o/profile%2FhffGUjwyCNV2uAMnnrJh1Emdrwk1?alt=media&token=37363ae0-adb8-4e10-930f-e5918fd20b7c",
+                            "location":"37.785834,-122.406417",
                         ]
-                        Database.database().reference().child("user").child(authUser.user.uid).updateChildValues(dict, withCompletionBlock: {
+                        
+                        //define field in matchDetails table
+                        let matchDetail: Dictionary<String, Any>  = [
+                            "uid": authUser.user.uid,
+                            "totalLike": 0,
+                            "totalMatched": 0,
+                            "likedID": "",
+                            "dislikedID": "",
+                            "matchedID": "",
+                        ]
+                        
+                        //create child in users table
+                        Database.database().reference().child("users").child(authUser.user.uid).updateChildValues(dict, withCompletionBlock: {
                             (error, ref) in
                             if error == nil {
-                                print("Done")
+                                print("Done create child in users table")
                             }
                         })
+                        //create child in matchDetails table
+                        Database.database().reference().child("matchDetails").child(authUser.user.uid).updateChildValues(matchDetail, withCompletionBlock: {
+                             (error, ref) in
+                             if error == nil {
+                                 print("Done create child in matchDetails table")
+                             }
+                         })
+                        
                         
                     }
-                    
-                    
+                //hide loading
+                ERProgressHud.sharedInstance.hide()
                 self.performSegue(withIdentifier: "openFillNameSegue", sender: nil)
                     
                 }

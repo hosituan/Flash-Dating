@@ -16,9 +16,7 @@
 		FBAC348824B76456002641B4 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC348724B76456002641B4 /* TitleLabel.swift */; };
 		FBAC348F24B7817B002641B4 /* Metropolis-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBAC348E24B7817B002641B4 /* Metropolis-Black.otf */; };
 		FBD781B724BB6A9000833192 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD781B624BB6A9000833192 /* AddressViewController.swift */; };
-		FBDF516224B72EB00021B895 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF516124B72EB00021B895 /* VerifyViewController.swift */; };
 		FBDF516424B732070021B895 /* FillNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF516324B732070021B895 /* FillNameViewController.swift */; };
-		FBDF516624B73D4E0021B895 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF516524B73D4E0021B895 /* ForgotPasswordViewController.swift */; };
 		FBDF516E24B7555E0021B895 /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF516D24B7555E0021B895 /* StartPageViewController.swift */; };
 		FBDF517024B75B450021B895 /* PinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDF516F24B75B450021B895 /* PinkButton.swift */; };
 		FBE10C0A24B5F44B007D3C79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE10C0924B5F44B007D3C79 /* AppDelegate.swift */; };
@@ -27,7 +25,6 @@
 		FBE10C1324B5F44C007D3C79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBE10C1224B5F44C007D3C79 /* Assets.xcassets */; };
 		FBE10C1624B5F44C007D3C79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE10C1424B5F44C007D3C79 /* LaunchScreen.storyboard */; };
 		FBE10C2524B5FE7A007D3C79 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE10C2424B5FE7A007D3C79 /* HomeViewController.swift */; };
-		FBE10C2724B60184007D3C79 /* CurrentProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE10C2624B60184007D3C79 /* CurrentProfile.swift */; };
 		FBE10C2924B601A4007D3C79 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE10C2824B601A4007D3C79 /* User.swift */; };
 		FBE10C2B24B603C3007D3C79 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE10C2A24B603C3007D3C79 /* ProfileViewController.swift */; };
 		FBE10C2D24B60ABB007D3C79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE10C2C24B60ABB007D3C79 /* LoginViewController.swift */; };
@@ -66,9 +63,7 @@
 		FBAC34A024B78195002641B4 /* Metropolis-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-MediumItalic.otf"; sourceTree = "<group>"; };
 		FBAC34A124B78195002641B4 /* Metropolis-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-LightItalic.otf"; sourceTree = "<group>"; };
 		FBD781B624BB6A9000833192 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
-		FBDF516124B72EB00021B895 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		FBDF516324B732070021B895 /* FillNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillNameViewController.swift; sourceTree = "<group>"; };
-		FBDF516524B73D4E0021B895 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		FBDF516D24B7555E0021B895 /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
 		FBDF516F24B75B450021B895 /* PinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkButton.swift; sourceTree = "<group>"; };
 		FBE10C0624B5F44B007D3C79 /* Flash Dating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flash Dating.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +74,6 @@
 		FBE10C1524B5F44C007D3C79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBE10C1724B5F44C007D3C79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBE10C2424B5FE7A007D3C79 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		FBE10C2624B60184007D3C79 /* CurrentProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentProfile.swift; sourceTree = "<group>"; };
 		FBE10C2824B601A4007D3C79 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FBE10C2A24B603C3007D3C79 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FBE10C2C24B60ABB007D3C79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -165,8 +159,6 @@
 			children = (
 				FB0CD00124B7B43D0049657F /* EditImageViewController.swift */,
 				FBE10C2C24B60ABB007D3C79 /* LoginViewController.swift */,
-				FBDF516124B72EB00021B895 /* VerifyViewController.swift */,
-				FBDF516524B73D4E0021B895 /* ForgotPasswordViewController.swift */,
 				FBEE2C7B24B6F64400910BC6 /* RegisterViewController.swift */,
 				FBDF516324B732070021B895 /* FillNameViewController.swift */,
 				FBDF516D24B7555E0021B895 /* StartPageViewController.swift */,
@@ -227,7 +219,6 @@
 		FBE10C1E24B5F65D007D3C79 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FBE10C2624B60184007D3C79 /* CurrentProfile.swift */,
 				FBE10C2824B601A4007D3C79 /* User.swift */,
 			);
 			path = Model;
@@ -430,11 +421,8 @@
 				FB4DEBFE24BA268A004E66F4 /* ViewController.swift in Sources */,
 				FBAC348624B75EB9002641B4 /* BlueButton.swift in Sources */,
 				FBE10C2B24B603C3007D3C79 /* ProfileViewController.swift in Sources */,
-				FBDF516224B72EB00021B895 /* VerifyViewController.swift in Sources */,
-				FBDF516624B73D4E0021B895 /* ForgotPasswordViewController.swift in Sources */,
 				FBE10C2524B5FE7A007D3C79 /* HomeViewController.swift in Sources */,
 				FBDF516E24B7555E0021B895 /* StartPageViewController.swift in Sources */,
-				FBE10C2724B60184007D3C79 /* CurrentProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,7 +570,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S423MR2Z88;
 				INFOPLIST_FILE = "Flash Dating/App Delegate/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -602,7 +590,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S423MR2Z88;
 				INFOPLIST_FILE = "Flash Dating/App Delegate/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

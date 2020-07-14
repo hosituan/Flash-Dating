@@ -20,18 +20,32 @@ class EditImageViewController: ViewController {
         setUp()
 
     }
+    //MARK: -- Set up
+    func setUp() {
+        imageView.layer.cornerRadius = imageView.layer.frame.size.width/2
+        imageView.clipsToBounds = true
+        let imageTap = UITapGestureRecognizer(target: self, action: #selector(EditImageViewController.tapImageView))
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(imageTap)
+
+    }
     
     //MARK: -- Action
     
     @IBAction func selectButton(_ sender: UIButton) {
         
-        
-        
+        //show loading
+        ERProgressHud.sharedInstance.show(withTitle: "Loading...")
         if isChanged == true {
             setImage()
+            //hide loading
+            ERProgressHud.sharedInstance.hide()
             self.dismiss(animated: true, completion: nil)
         }
         else {
+            //hide loading
+            ERProgressHud.sharedInstance.hide()
+            //show alert
             let alert = UIAlertController(title: "Message", message: "You have not choosen Profile Image", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(okAction)
@@ -40,7 +54,9 @@ class EditImageViewController: ViewController {
         
     }
     //MARK: --Function
-    func setImage(){
+    //Upload Image
+    func setImage()
+    {
         guard let imageData = self.imageView.image!.jpegData(compressionQuality: 1.0) else {
              return
         }
@@ -49,6 +65,7 @@ class EditImageViewController: ViewController {
         
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpg"
+        //upload image to firebase storage
         storageProfileRef.putData(imageData, metadata: metadata, completion: {
             (StorageMetadata, error) in
             if error != nil {
@@ -59,22 +76,24 @@ class EditImageViewController: ViewController {
         storageProfileRef.downloadURL(completion: {
             (url, error) in
             if let metaImageUrl = url?.absoluteString {
+                //update profile image url in authentication
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                 changeRequest?.photoURL = URL(string: metaImageUrl)
                 changeRequest?.commitChanges { (error) in
                 }
-    
-                Database.database().reference().child("user").child(Auth.auth().currentUser!.uid).updateChildValues(["profileImageUrl": metaImageUrl], withCompletionBlock: {
+                //update profileImageUrl in databse
+                Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).updateChildValues(["profileImageUrl": metaImageUrl], withCompletionBlock: {
                     (error, ref) in
                     if error == nil {
-                        print("Done")
+                        print("Done update profile image")
                     }
                 })
-                
 
             }
         })
     }
+    
+    //Set action for tap Image view
     @IBAction func tapImageView(sender: UITapGestureRecognizer) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -83,30 +102,16 @@ class EditImageViewController: ViewController {
         self.present(picker, animated: true, completion: nil)
     }
 
-    
-    //MARK: -- Set up
-    func setUp() {
-        imageView.layer.cornerRadius = imageView.layer.frame.size.width/2
-        imageView.clipsToBounds = true
-        let imageTap = UITapGestureRecognizer(target: self, action: #selector(EditImageViewController.tapImageView))
-        imageView.isUserInteractionEnabled = true
-        imageView.addGestureRecognizer(imageTap)
-
-    }
-
-    
-
 }
 
 
-//MARK: --Extension
+//MARK: --Extension for image picker
 extension EditImageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let imageSelected = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             imageView.image = imageSelected
             isChanged = true
         }
-        
         picker.dismiss(animated: true, completion: nil)
     }
     

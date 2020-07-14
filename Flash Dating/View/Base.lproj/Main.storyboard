@@ -270,8 +270,8 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDv-HD-wMt">
-                                                        <rect key="frame" x="15" y="34" width="41" height="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDv-HD-wMt">
+                                                        <rect key="frame" x="15" y="34" width="28.5" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -477,8 +477,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bR-4x-laG" userLabel="Total Love">
                                                 <rect key="frame" x="199.5" y="10" width="160.5" height="90"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VH3-8B-iV5">
-                                                        <rect key="frame" x="15" y="34" width="25" height="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VH3-8B-iV5">
+                                                        <rect key="frame" x="15" y="34" width="12.5" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -565,9 +565,11 @@
                         <outlet property="logoutButton" destination="1VM-EH-9ar" id="fgW-nk-d5K"/>
                         <outlet property="logoutView" destination="MFJ-An-gCA" id="XrH-1i-Gei"/>
                         <outlet property="matchView" destination="1IB-I4-TlB" id="ocR-ti-JxU"/>
+                        <outlet property="matchedLabel" destination="QDv-HD-wMt" id="E7V-3Q-Usy"/>
                         <outlet property="nameLabel" destination="ZfQ-2x-m5f" id="eSN-0d-iKm"/>
                         <outlet property="profileImage" destination="NPc-2n-etB" id="XrW-BC-Epf"/>
                         <outlet property="scrollView" destination="jzU-Vn-nK6" id="nqd-e2-6wW"/>
+                        <outlet property="totalLoveLabel" destination="VH3-8B-iV5" id="LRn-BQ-ane"/>
                         <outlet property="totalLoveView" destination="3bR-4x-laG" id="CKh-hL-cNd"/>
                         <segue destination="RJp-rI-yGG" kind="presentation" identifier="logoutSegue" modalPresentationStyle="fullScreen" id="gqX-sL-nT0"/>
                         <segue destination="YtY-MK-2CU" kind="showDetail" identifier="openFillNameSegue" id="pVM-Sm-y9d"/>
@@ -750,11 +752,11 @@
             <objects>
                 <viewController id="YtY-MK-2CU" customClass="FillNameViewController" customModule="Flash_Dating" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mN5-zO-Dvr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KEv-YA-YxO" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="30" y="234" width="315" height="60"/>
+                                <rect key="frame" x="30" y="190" width="315" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="MfW-Rz-Hd5"/>
                                 </constraints>
@@ -766,7 +768,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SU1-ro-2Zk" customClass="PinkButton" customModule="Flash_Dating" customModuleProvider="target">
-                                <rect key="frame" x="30" y="374" width="315" height="50"/>
+                                <rect key="frame" x="30" y="330" width="315" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.80392156859999997" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="f6y-qs-iIO"/>
@@ -779,7 +781,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viS-GI-Vl7">
-                                <rect key="frame" x="20" y="104" width="335" height="80"/>
+                                <rect key="frame" x="20" y="60" width="335" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="CRN-PY-8op"/>
                                 </constraints>
@@ -1148,7 +1150,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="s0s-0X-JaX"/>
         <segue reference="RJO-Pp-2qR"/>
-        <segue reference="vJE-S5-sOg"/>
+        <segue reference="pVM-Sm-y9d"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Address" width="24" height="24"/>

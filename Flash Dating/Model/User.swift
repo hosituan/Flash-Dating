@@ -14,7 +14,15 @@ struct User: Codable {
     var photoURL: String
     var uid: String
     var location: String
-    var totalMatched:Int = 0
-    var totalLiked:Int = 0
     var distance: Double = 0.0
 }
+
+struct UserMatchDetail: Codable {
+    var uid: String
+    var totalMatched: Int
+    var totalLiked: Int
+    var likedID: String
+    var dislikedID: String
+    var matchedID: String
+}
+

@@ -63,7 +63,6 @@ class LoginViewController: ViewController, FUIAuthDelegate {
             }
     }
     
-    
     //MARK: -- Load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,6 +80,8 @@ class LoginViewController: ViewController, FUIAuthDelegate {
         forgotPasswordLabel.isUserInteractionEnabled = true
         forgotPasswordLabel.addGestureRecognizer(forgotPasswordLabelTap)
     }
+    
+    //set up action for label
     @objc func tapSignUpLabel() {
         self.performSegue(withIdentifier: "openSignUpSegue", sender: nil)
     }
@@ -95,6 +96,10 @@ class LoginViewController: ViewController, FUIAuthDelegate {
             showAlert(message: "You have to fill your email!")
         }
     }
+    
+    
+    
+    //MARK: -- Show alert
     func showAlert(message: String) {
            let alert = UIAlertController(title: "Message", message: message, preferredStyle: .alert)
            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
