@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Flash_Dating_001VersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Flash_Dating_001VersionString[];
+FOUNDATION_EXPORT double Pods_Flash_DatingVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Flash_DatingVersionString[];
 

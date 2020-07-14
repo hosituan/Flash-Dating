@@ -1,0 +1,6 @@
+framework module Pods_Flash_Dating {
+  umbrella header "Pods-Flash Dating-umbrella.h"
+
+  export *
+  module * { export * }
+}
