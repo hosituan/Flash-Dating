@@ -15,6 +15,7 @@ pod 'Firebase/Firestore'
 pod 'Firebase/Analytics'
 pod 'SkyFloatingLabelTextField', '~> 3.0'
 pod 'Firebase/Storage'
+pod "Koloda"
 
   # Pods for Flash Dating
 
