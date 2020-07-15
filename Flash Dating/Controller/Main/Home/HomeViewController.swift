@@ -19,13 +19,14 @@ class HomeViewController: UIViewController {
     
     //MARK: -- Declare for Swipe like and Dislike
     
-    let images = ["img1", "img2"]
     var userProfileImgsArray:[UIImage] = []
     
     var userArr:[User] = []
     
     @IBOutlet var mainView: KolodaView!
     
+    @IBOutlet var dislikeImageSwipe: UIImageView!
+    @IBOutlet var likeImageSwipe: UIImageView!
     
     //MARK: -- Declare
     
@@ -50,24 +51,33 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
-        ERProgressHud.sharedInstance.showBlurView(withTitle: "Loading...")
+        ERProgressHud.sharedInstance.show(withTitle: "Loading...")
         self.updateLocation {
             //lay tam range la 50000km
             self.getUserInRange(range: 500000) { userProfileImgsArray in
-                
-                self.nameLabel.text = self.userArr[0].name
-                self.distanceLabel.text = "\(self.userArr[0].distance.rounded()) KM"
+                if (self.userArr.count > 0) {
+                    self.nameLabel.text = self.userArr[0].name
+                    self.distanceLabel.text = "\(self.userArr[0].distance.rounded()) KM"
+                }
+                else {
+                    self.nameLabel.text = "Nobody here!"
+                    self.distanceLabel.text = "0.0KM"
+                    let uiImage = UIImage(named: "Logout")
+                    self.ageLabel.text = "0"
+                    let backgroundColor = UIColor(patternImage: uiImage!)
+                    self.mainView.backgroundColor = backgroundColor
+                }
                 //set up for swipe
                 self.mainView.dataSource = self
                 self.mainView.delegate = self
 
-                //self.setInformation(i: self.index)
+                ERProgressHud.sharedInstance.hide()
                 
             }
 
 
         }
-        ERProgressHud.sharedInstance.hide()
+        
 
         
     }
@@ -81,27 +91,19 @@ class HomeViewController: UIViewController {
     
 
     //MARK: -- ACTION
-    @IBAction func dislikeSwipe(_ sender: UIButton) {
-        //self.index += 1
-        //self.setInformation(i: self.index)
-        
-    }
-    @IBAction func likeSwipe(_ sender: UIButton) {
-        //self.index += 1
-        //self.setInformation(i: self.index)
-    }
+
     
 
-    @IBAction func tapLikeImage(sender: UITapGestureRecognizer) {
-        checkMatch(index: 0)
+    @IBAction func tapLikeImage(Index: Int, sender: UITapGestureRecognizer) {
+        checkMatch(index: Index)
         guard self.userArr.count != 0 else {
             return
         }
-        updateLike (index: 0) {
+        updateLike (index: Index) {
         }
     }
-    @IBAction func tapDislikeImage(sender: UITapGestureRecognizer) {
-        updateDislike (index: 0) {
+    @IBAction func tapDislikeImage(Index: Int, sender: UITapGestureRecognizer) {
+        updateDislike (index: Index) {
                 
             }
 
@@ -159,7 +161,11 @@ class HomeViewController: UIViewController {
             for item in result {
                 if item == Auth.auth().currentUser!.uid
                 {
-                    print("matched")
+                    //show alert
+                    let alert = UIAlertController(title: "Message", message: "You matched with this people", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true, completion: nil)
                     
                     //update for current user, set matchedID += userArr[index]
                     let matchedIDForCurrent = value?["matchedID"] as? String ?? ""
@@ -187,13 +193,6 @@ class HomeViewController: UIViewController {
                     
                 }
             }
-            
-//            Database.database().reference().child("matchDetails").child(Auth.auth().currentUser!.uid).updateChildValues(["likedID": "\(likedID),\(self.userArr[self.index].uid)", "totalLike": totalLike + 1], withCompletionBlock: { (error, ref) in
-//                if error == nil {
-//                  print("Done Liked")
-//                }
-//                completionHandler()
-//                })
             
           }) { (error) in
             print(error.localizedDescription)
@@ -318,7 +317,8 @@ class HomeViewController: UIViewController {
         
 
         
-        
+        likeImageSwipe.isHidden = true
+        dislikeImageSwipe.isHidden = true
         
         //mainImage.layer.cornerRadius = 10
         infoView.layer.cornerRadius = 10
@@ -329,17 +329,24 @@ class HomeViewController: UIViewController {
         //mainImage.isUserInteractionEnabled = true
         //mainImage.addGestureRecognizer(mainImageTap)
         
-        let likeImageTap = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.tapLikeImage))
+        let likeImageTap = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.sendSwipeRightAction))
         likeImage.isUserInteractionEnabled = true
         likeImage.addGestureRecognizer(likeImageTap)
         
-        let dislikeImageTap = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.tapDislikeImage))
+        let dislikeImageTap = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.sendSwipeLeftAction))
         dislikeImage.isUserInteractionEnabled = true
         dislikeImage.addGestureRecognizer(dislikeImageTap)
 
     }
+    @objc func sendSwipeRightAction() {
+        mainView.swipe(.right)
+        
+    }
+    @objc func sendSwipeLeftAction() {
+        mainView.swipe(.left)
+    }
 }
-    
+
 
 
 
@@ -380,7 +387,12 @@ extension HomeViewController:  CLLocationManagerDelegate {
 extension HomeViewController: KolodaViewDelegate {
     
   func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-    koloda.reloadData()
+    self.nameLabel.text = "Nobody here!"
+    self.distanceLabel.text = "0.0KM"
+    let uiImage = UIImage(named: "Logout")
+    self.ageLabel.text = "0"
+    let backgroundColor = UIColor(patternImage: uiImage!)
+    self.mainView.backgroundColor = backgroundColor
   }
   
   func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
@@ -395,24 +407,47 @@ extension HomeViewController: KolodaViewDataSource {
         let view = UIImageView(image: userProfileImgsArray[index])
         view.layer.cornerRadius = 10
         view.clipsToBounds = true
-        
         return view
       }
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection)
     {
         print("we have \(userArr.count) user")
         if (index + 1  < userProfileImgsArray.count) {
-            //self.setInformation(i: index)
             self.nameLabel.text = self.userArr[index + 1].name
             self.distanceLabel.text = "\(self.userArr[index + 1].distance.rounded()) KM"
         }
         if direction == .left {
+            tapDislikeImage(Index: index, sender: .init())
             print ("swipe left")
         }
         if direction == .right {
+            
+            tapLikeImage(Index: index, sender: .init())
             print("swipe right")
         }
     }
+    
+    func koloda(_ koloda: KolodaView, draggedCardWithPercentage finishPercentage: CGFloat, in direction: SwipeResultDirection)
+    {
+        
+        if direction == .left {
+            dislikeImageSwipe.isHidden = false
+            likeImageSwipe.isHidden = true
+        }
+        if direction == .right {
+            dislikeImageSwipe.isHidden = true
+            likeImageSwipe.isHidden = false
+        }
+        
+    }
+    func koloda(_ koloda: KolodaView, shouldSwipeCardAt index: Int, in direction: SwipeResultDirection) -> Bool {
+        dislikeImageSwipe.isHidden = true
+        likeImageSwipe.isHidden = true
+        return true
+    }
+    
+    
+    
 }
 
 

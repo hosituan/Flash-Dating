@@ -57,6 +57,20 @@
                                         <rect key="frame" x="20" y="30" width="335" height="478"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DislikeImageSwipe" translatesAutoresizingMaskIntoConstraints="NO" id="vjM-pY-vzs">
+                                        <rect key="frame" x="162.5" y="229" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="FIl-tB-rxx"/>
+                                            <constraint firstAttribute="width" constant="50" id="jqK-e7-62g"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LikeImageSwipe" translatesAutoresizingMaskIntoConstraints="NO" id="PQf-Uu-he8">
+                                        <rect key="frame" x="162.5" y="229" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="kHs-SK-THj"/>
+                                            <constraint firstAttribute="height" constant="50" id="rMk-nX-NqI"/>
+                                        </constraints>
+                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gg-c1-8lR">
                                         <rect key="frame" x="25" y="408" width="325" height="100"/>
                                         <subviews>
@@ -103,13 +117,17 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="vjM-pY-vzs" firstAttribute="centerY" secondItem="lxi-1A-WZd" secondAttribute="centerY" id="43w-75-VWh"/>
+                                    <constraint firstItem="PQf-Uu-he8" firstAttribute="centerX" secondItem="lxi-1A-WZd" secondAttribute="centerX" id="6Tl-FA-nxQ"/>
                                     <constraint firstAttribute="bottom" secondItem="86W-Bv-BXV" secondAttribute="bottom" id="EhC-SI-BJ0"/>
                                     <constraint firstItem="86W-Bv-BXV" firstAttribute="top" secondItem="lxi-1A-WZd" secondAttribute="top" constant="30" id="NXL-do-jen"/>
                                     <constraint firstAttribute="trailing" secondItem="86W-Bv-BXV" secondAttribute="trailing" constant="20" id="QPI-bW-gd2"/>
                                     <constraint firstItem="0gg-c1-8lR" firstAttribute="leading" secondItem="lxi-1A-WZd" secondAttribute="leading" constant="25" id="SD9-t1-QTe"/>
                                     <constraint firstAttribute="trailing" secondItem="0gg-c1-8lR" secondAttribute="trailing" constant="25" id="UsD-Xl-Yzw"/>
                                     <constraint firstAttribute="bottom" secondItem="0gg-c1-8lR" secondAttribute="bottom" id="bAA-cy-1MY"/>
+                                    <constraint firstItem="PQf-Uu-he8" firstAttribute="centerY" secondItem="lxi-1A-WZd" secondAttribute="centerY" id="heX-2o-EsN"/>
                                     <constraint firstItem="86W-Bv-BXV" firstAttribute="leading" secondItem="lxi-1A-WZd" secondAttribute="leading" constant="20" id="iaU-s2-BcA"/>
+                                    <constraint firstItem="vjM-pY-vzs" firstAttribute="centerX" secondItem="lxi-1A-WZd" secondAttribute="centerX" id="sM8-Sf-0jr"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -132,9 +150,11 @@
                     <connections>
                         <outlet property="ageLabel" destination="sDj-qq-Hme" id="2EY-J3-F1d"/>
                         <outlet property="dislikeImage" destination="Z8z-3J-Sz7" id="3RY-2T-jRX"/>
+                        <outlet property="dislikeImageSwipe" destination="vjM-pY-vzs" id="uD1-3V-Z1U"/>
                         <outlet property="distanceLabel" destination="ojS-YI-cor" id="xrh-AM-bNj"/>
                         <outlet property="infoView" destination="0gg-c1-8lR" id="U19-zT-Gam"/>
                         <outlet property="likeImage" destination="dik-eW-xm7" id="eAo-dS-Tgm"/>
+                        <outlet property="likeImageSwipe" destination="PQf-Uu-he8" id="EkD-8s-zU0"/>
                         <outlet property="mainView" destination="86W-Bv-BXV" id="cuE-tP-2nq"/>
                         <outlet property="nameLabel" destination="EA2-cu-3fL" id="ndI-lC-FGJ"/>
                     </connections>
@@ -1162,7 +1182,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="s0s-0X-JaX"/>
         <segue reference="RJO-Pp-2qR"/>
-        <segue reference="vJE-S5-sOg"/>
+        <segue reference="bgQ-VJ-ZT1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Address" width="24" height="24"/>
@@ -1171,8 +1191,10 @@
         <image name="ChatBarSelected" width="20" height="19"/>
         <image name="DefaulAvatar" width="40" height="40"/>
         <image name="Dislike" width="117" height="117"/>
+        <image name="DislikeImageSwipe" width="500" height="500"/>
         <image name="Language" width="24" height="24"/>
         <image name="Like" width="117" height="117"/>
+        <image name="LikeImageSwipe" width="327" height="327"/>
         <image name="Logout" width="18" height="18"/>
         <image name="MainBar" width="18.5" height="23"/>
         <image name="MainBarSelected" width="18.5" height="23"/>

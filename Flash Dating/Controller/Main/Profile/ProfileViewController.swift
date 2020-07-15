@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import FBSDKLoginKit
 import CoreLocation
+import FirebaseAuth
+import FirebaseDatabase
 
 class ProfileViewController: UIViewController {
     
