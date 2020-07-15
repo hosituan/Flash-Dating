@@ -11,6 +11,7 @@ import Firebase
 import FirebaseDatabase
 import CoreLocation
 import Koloda
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
@@ -309,8 +310,8 @@ class HomeViewController: UIViewController {
     }
     
     func setInformation(i: Int) {
-
-        ERProgressHud.sharedInstance.hide()
+        self.nameLabel.text = self.userArr[i + 1].name
+        self.distanceLabel.text = "\(self.userArr[i + 1].distance.rounded()) KM"
     }
 //MARK: --Setup
     func setUp() {
@@ -399,9 +400,9 @@ extension HomeViewController: KolodaViewDataSource {
       }
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection)
     {
-        print(index)
         print("we have \(userArr.count) user")
         if (index + 1  < userProfileImgsArray.count) {
+            //self.setInformation(i: index)
             self.nameLabel.text = self.userArr[index + 1].name
             self.distanceLabel.text = "\(self.userArr[index + 1].distance.rounded()) KM"
         }
@@ -420,20 +421,15 @@ extension HomeViewController: KolodaViewDataSource {
 extension UIImage {
 
 public static func loadFrom(url: URL, completion: @escaping (_ image: UIImage?) -> ()) {
-    DispatchQueue.global().async {
         if let data = try? Data(contentsOf: url) {
-            DispatchQueue.main.async {
                 completion(UIImage(data: data))
-            }
         } else {
-            DispatchQueue.main.async {
                 completion(nil)
-            }
         }
     }
 }
 
-}
+
 
 
 
