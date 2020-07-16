@@ -12,6 +12,7 @@ import FirebaseDatabase
 import CoreLocation
 import Koloda
 import FirebaseAuth
+import SCLAlertView
 
 class HomeViewController: UIViewController {
     
@@ -58,6 +59,7 @@ class HomeViewController: UIViewController {
                 if (self.userArr.count > 0) {
                     self.nameLabel.text = self.userArr[0].name
                     self.distanceLabel.text = "\(self.userArr[0].distance.rounded()) KM"
+                    ERProgressHud.sharedInstance.hide()
                 }
                 else {
                     self.nameLabel.text = "Nobody here!"
@@ -66,12 +68,12 @@ class HomeViewController: UIViewController {
                     self.ageLabel.text = "0"
                     let backgroundColor = UIColor(patternImage: uiImage!)
                     self.mainView.backgroundColor = backgroundColor
+                    ERProgressHud.sharedInstance.hide()
                 }
                 //set up for swipe
                 self.mainView.dataSource = self
                 self.mainView.delegate = self
-
-                ERProgressHud.sharedInstance.hide()
+                
                 
             }
 
@@ -162,10 +164,14 @@ class HomeViewController: UIViewController {
                 if item == Auth.auth().currentUser!.uid
                 {
                     //show alert
-                    let alert = UIAlertController(title: "Message", message: "You matched with this people", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    alert.addAction(okAction)
-                    self.present(alert, animated: true, completion: nil)
+                    let appearance = SCLAlertView.SCLAppearance(
+                        showCircularIcon: true
+                    )
+
+                    let alertView = SCLAlertView(appearance: appearance)
+                    let alertViewIcon = UIImage(named: "HeartImage")
+                    alertView.showNotice("New Match!!!", subTitle: "This person liked you!", closeButtonTitle: "Nice!", colorStyle: 0xFE3C72, circleIconImage: alertViewIcon)
+                    
                     
                     //update for current user, set matchedID += userArr[index]
                     let matchedIDForCurrent = value?["matchedID"] as? String ?? ""
@@ -339,6 +345,9 @@ class HomeViewController: UIViewController {
 
     }
     @objc func sendSwipeRightAction() {
+
+        
+        
         mainView.swipe(.right)
         
     }
@@ -405,6 +414,7 @@ extension HomeViewController: KolodaViewDataSource {
       
       func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView{
         let view = UIImageView(image: userProfileImgsArray[index])
+        view.contentMode = .scaleAspectFill
         view.layer.cornerRadius = 10
         view.clipsToBounds = true
         return view

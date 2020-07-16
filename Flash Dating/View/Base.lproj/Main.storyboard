@@ -58,17 +58,17 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DislikeImageSwipe" translatesAutoresizingMaskIntoConstraints="NO" id="vjM-pY-vzs">
-                                        <rect key="frame" x="162.5" y="229" width="50" height="50"/>
+                                        <rect key="frame" x="152.5" y="219" width="70" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="FIl-tB-rxx"/>
-                                            <constraint firstAttribute="width" constant="50" id="jqK-e7-62g"/>
+                                            <constraint firstAttribute="width" constant="70" id="Eyp-Kb-me0"/>
+                                            <constraint firstAttribute="height" constant="70" id="rsf-mh-fJ8"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LikeImageSwipe" translatesAutoresizingMaskIntoConstraints="NO" id="PQf-Uu-he8">
-                                        <rect key="frame" x="162.5" y="229" width="50" height="50"/>
+                                        <rect key="frame" x="152.5" y="219" width="70" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="kHs-SK-THj"/>
-                                            <constraint firstAttribute="height" constant="50" id="rMk-nX-NqI"/>
+                                            <constraint firstAttribute="height" constant="70" id="0aJ-v6-eaf"/>
+                                            <constraint firstAttribute="width" constant="70" id="p62-iB-oNc"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gg-c1-8lR">
@@ -117,17 +117,17 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="vjM-pY-vzs" firstAttribute="centerY" secondItem="lxi-1A-WZd" secondAttribute="centerY" id="43w-75-VWh"/>
-                                    <constraint firstItem="PQf-Uu-he8" firstAttribute="centerX" secondItem="lxi-1A-WZd" secondAttribute="centerX" id="6Tl-FA-nxQ"/>
+                                    <constraint firstItem="PQf-Uu-he8" firstAttribute="centerX" secondItem="lxi-1A-WZd" secondAttribute="centerX" id="E8T-NB-E9D"/>
                                     <constraint firstAttribute="bottom" secondItem="86W-Bv-BXV" secondAttribute="bottom" id="EhC-SI-BJ0"/>
+                                    <constraint firstItem="vjM-pY-vzs" firstAttribute="centerX" secondItem="lxi-1A-WZd" secondAttribute="centerX" id="JtL-pQ-QU4"/>
+                                    <constraint firstItem="vjM-pY-vzs" firstAttribute="centerY" secondItem="lxi-1A-WZd" secondAttribute="centerY" id="NXL-WU-tOq"/>
                                     <constraint firstItem="86W-Bv-BXV" firstAttribute="top" secondItem="lxi-1A-WZd" secondAttribute="top" constant="30" id="NXL-do-jen"/>
                                     <constraint firstAttribute="trailing" secondItem="86W-Bv-BXV" secondAttribute="trailing" constant="20" id="QPI-bW-gd2"/>
                                     <constraint firstItem="0gg-c1-8lR" firstAttribute="leading" secondItem="lxi-1A-WZd" secondAttribute="leading" constant="25" id="SD9-t1-QTe"/>
+                                    <constraint firstItem="PQf-Uu-he8" firstAttribute="centerY" secondItem="lxi-1A-WZd" secondAttribute="centerY" id="TEm-IL-D3N"/>
                                     <constraint firstAttribute="trailing" secondItem="0gg-c1-8lR" secondAttribute="trailing" constant="25" id="UsD-Xl-Yzw"/>
                                     <constraint firstAttribute="bottom" secondItem="0gg-c1-8lR" secondAttribute="bottom" id="bAA-cy-1MY"/>
-                                    <constraint firstItem="PQf-Uu-he8" firstAttribute="centerY" secondItem="lxi-1A-WZd" secondAttribute="centerY" id="heX-2o-EsN"/>
                                     <constraint firstItem="86W-Bv-BXV" firstAttribute="leading" secondItem="lxi-1A-WZd" secondAttribute="leading" constant="20" id="iaU-s2-BcA"/>
-                                    <constraint firstItem="vjM-pY-vzs" firstAttribute="centerX" secondItem="lxi-1A-WZd" secondAttribute="centerX" id="sM8-Sf-0jr"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -784,11 +784,11 @@
             <objects>
                 <viewController id="YtY-MK-2CU" customClass="FillNameViewController" customModule="Flash_Dating" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mN5-zO-Dvr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KEv-YA-YxO" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="30" y="234" width="315" height="60"/>
+                                <rect key="frame" x="30" y="190" width="315" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="MfW-Rz-Hd5"/>
                                 </constraints>
@@ -800,7 +800,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SU1-ro-2Zk" customClass="PinkButton" customModule="Flash_Dating" customModuleProvider="target">
-                                <rect key="frame" x="30" y="374" width="315" height="50"/>
+                                <rect key="frame" x="30" y="330" width="315" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.80392156859999997" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="f6y-qs-iIO"/>
@@ -813,7 +813,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viS-GI-Vl7">
-                                <rect key="frame" x="20" y="104" width="335" height="80"/>
+                                <rect key="frame" x="20" y="60" width="335" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="CRN-PY-8op"/>
                                 </constraints>
@@ -1182,7 +1182,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="s0s-0X-JaX"/>
         <segue reference="RJO-Pp-2qR"/>
-        <segue reference="bgQ-VJ-ZT1"/>
+        <segue reference="pVM-Sm-y9d"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Address" width="24" height="24"/>

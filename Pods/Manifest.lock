@@ -396,9 +396,14 @@ PODS:
   - GTMSessionFetcher/Core (1.4.0)
   - GTMSessionFetcher/Full (1.4.0):
     - GTMSessionFetcher/Core (= 1.4.0)
+  - InputBarAccessoryView (4.3.2):
+    - InputBarAccessoryView/Core (= 4.3.2)
+  - InputBarAccessoryView/Core (4.3.2)
   - Koloda (5.0.1):
     - pop (~> 1.0)
   - leveldb-library (1.22)
+  - MessageKit (3.1.0):
+    - InputBarAccessoryView (~> 4.3.0)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
@@ -412,6 +417,7 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - SCLAlertView (0.8)
   - SDWebImage (5.8.3):
     - SDWebImage/Core (= 5.8.3)
   - SDWebImage/Core (5.8.3)
@@ -426,8 +432,11 @@ DEPENDENCIES:
   - FirebaseUI/Auth
   - FirebaseUI/Facebook
   - Koloda
+  - MessageKit
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
+  - SCLAlertView
+  - SDWebImage
   - SkyFloatingLabelTextField (~> 3.0)
 
 SPEC REPOS:
@@ -455,14 +464,17 @@ SPEC REPOS:
     - gRPC-Core
     - GTMAppAuth
     - GTMSessionFetcher
+    - InputBarAccessoryView
     - Koloda
     - leveldb-library
+    - MessageKit
     - nanopb
     - pop
     - PromisesObjC
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SCLAlertView
     - SDWebImage
     - SkyFloatingLabelTextField
 
@@ -490,17 +502,20 @@ SPEC CHECKSUMS:
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  InputBarAccessoryView: 7985d418040a05fe894bd4b8328dd43ab35517c3
   Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  MessageKit: 3beb578737a5aa2bba25cc27c7b6d6faa09af5a7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SDWebImage: 112503ec94a5a2a41869503844a15e8d8f1ead5c
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
 
-PODFILE CHECKSUM: b61ab04e8e05149d9054fa08a215e61c8ccffe11
+PODFILE CHECKSUM: d4e89f891d8b537942d9ccbd0f204a665390fd4d
 
 COCOAPODS: 1.9.3

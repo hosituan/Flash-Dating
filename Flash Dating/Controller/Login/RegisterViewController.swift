@@ -52,7 +52,7 @@ class RegisterViewController: ViewController {
                             "uid": authUser.user.uid,
                             "email": authUser.user.email!,
                             "name": "",
-                            "profileImageUrl": "https://firebasestorage.googleapis.com/v0/b/flash-dating-001.appspot.com/o/profile%2FhffGUjwyCNV2uAMnnrJh1Emdrwk1?alt=media&token=37363ae0-adb8-4e10-930f-e5918fd20b7c",
+                            "profileImageUrl": "https://firebasestorage.googleapis.com/v0/b/flash-dating-001.appspot.com/o/profile%2FoPJ5RXvpPHe0Zr6Atwco9yjkSGm2?alt=media&token=27ec5df2-3633-4e88-9561-568331725d96",
                             "location":"37.785834,-122.406417",
                         ]
                         

@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class FillNameViewController: ViewController {
 
@@ -26,7 +28,7 @@ class FillNameViewController: ViewController {
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                 changeRequest?.displayName = nameTextField.text!
                 //this is default image
-                changeRequest?.photoURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/flash-dating-001.appspot.com/o/profile%2FhffGUjwyCNV2uAMnnrJh1Emdrwk1?alt=media&token=37363ae0-adb8-4e10-930f-e5918fd20b7c")
+                changeRequest?.photoURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/flash-dating-001.appspot.com/o/profile%2FoPJ5RXvpPHe0Zr6Atwco9yjkSGm2?alt=media&token=27ec5df2-3633-4e88-9561-568331725d96")
                 changeRequest?.commitChanges { (error) in
                 }
                 

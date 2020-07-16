@@ -12,6 +12,9 @@
 		FB0CD00424B83F340049657F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB0CD00324B83F340049657F /* GoogleService-Info.plist */; };
 		FB4DEBFE24BA268A004E66F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DEBFD24BA268A004E66F4 /* ViewController.swift */; };
 		FB4DEC0324BA3C95004E66F4 /* ERProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4DEC0224BA3C95004E66F4 /* ERProgressHud.swift */; };
+		FB8AF9BC24C0A2C300B47F74 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8AF9BB24C0A2C300B47F74 /* Chat.swift */; };
+		FB8AF9C124C0A30B00B47F74 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8AF9C024C0A30B00B47F74 /* ChatViewController.swift */; };
+		FB8AF9C324C0A60800B47F74 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8AF9C224C0A60800B47F74 /* Message.swift */; };
 		FBAC348624B75EB9002641B4 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC348524B75EB9002641B4 /* BlueButton.swift */; };
 		FBAC348824B76456002641B4 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC348724B76456002641B4 /* TitleLabel.swift */; };
 		FBAC348F24B7817B002641B4 /* Metropolis-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = FBAC348E24B7817B002641B4 /* Metropolis-Black.otf */; };
@@ -41,6 +44,9 @@
 		FB0CD00324B83F340049657F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB4DEBFD24BA268A004E66F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FB4DEC0224BA3C95004E66F4 /* ERProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERProgressHud.swift; sourceTree = "<group>"; };
+		FB8AF9BB24C0A2C300B47F74 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		FB8AF9C024C0A30B00B47F74 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		FB8AF9C224C0A60800B47F74 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		FBAC348524B75EB9002641B4 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 		FBAC348724B76456002641B4 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		FBAC348E24B7817B002641B4 /* Metropolis-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Black.otf"; sourceTree = "<group>"; };
@@ -111,6 +117,14 @@
 			path = ERProgressHud;
 			sourceTree = "<group>";
 		};
+		FB8AF9BD24C0A2E000B47F74 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				FB8AF9C024C0A30B00B47F74 /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		FBAC348B24B78146002641B4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +184,7 @@
 		FBDF516824B73E430021B895 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FB8AF9BD24C0A2E000B47F74 /* Chat */,
 				FBE0A1EC24BB9B0500BF5838 /* Home */,
 				FBD781B524BB6A7200833192 /* Profile */,
 			);
@@ -220,6 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				FBE10C2824B601A4007D3C79 /* User.swift */,
+				FB8AF9BB24C0A2C300B47F74 /* Chat.swift */,
+				FB8AF9C224C0A60800B47F74 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -409,10 +426,12 @@
 			files = (
 				FB0CD00224B7B43D0049657F /* EditImageViewController.swift in Sources */,
 				FB4DEC0324BA3C95004E66F4 /* ERProgressHud.swift in Sources */,
+				FB8AF9BC24C0A2C300B47F74 /* Chat.swift in Sources */,
 				FBEE2C7C24B6F64400910BC6 /* RegisterViewController.swift in Sources */,
 				FBDF516424B732070021B895 /* FillNameViewController.swift in Sources */,
 				FBE10C0A24B5F44B007D3C79 /* AppDelegate.swift in Sources */,
 				FBAC348824B76456002641B4 /* TitleLabel.swift in Sources */,
+				FB8AF9C324C0A60800B47F74 /* Message.swift in Sources */,
 				FBDF517024B75B450021B895 /* PinkButton.swift in Sources */,
 				FBE10C2924B601A4007D3C79 /* User.swift in Sources */,
 				FBE10C0C24B5F44B007D3C79 /* SceneDelegate.swift in Sources */,
@@ -422,6 +441,7 @@
 				FBAC348624B75EB9002641B4 /* BlueButton.swift in Sources */,
 				FBE10C2B24B603C3007D3C79 /* ProfileViewController.swift in Sources */,
 				FBE10C2524B5FE7A007D3C79 /* HomeViewController.swift in Sources */,
+				FB8AF9C124C0A30B00B47F74 /* ChatViewController.swift in Sources */,
 				FBDF516E24B7555E0021B895 /* StartPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

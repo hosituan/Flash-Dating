@@ -47,7 +47,7 @@ class LoginViewController: ViewController, FUIAuthDelegate {
                     }
               }
             else {
-                ERProgressHud.sharedInstance.hide()
+                
                 let userInfo = Auth.auth().currentUser
                 if (userInfo?.displayName == nil) {
                     self.performSegue(withIdentifier: "openFillNameSegue", sender: nil)
